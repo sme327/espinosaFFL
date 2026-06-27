@@ -1,0 +1,4 @@
+season,num_teams,scoring_type,draft_type,roster_slots,play_against_median,divisions,trade_deadline,waiver_type,max_acquisitions_season,max_acquisitions_week,draft_pick_trades,fractional_points,negative_points,playoff_tiebreaker
+2023,4,Head-to-Head,Offline Draft,"QB, WR, RB, TE, K, BN, BN, IR",No,No,"December 2, 2023",Continual rolling list,No maximum,No maximum,No,Yes,Yes,Higher seed wins
+2024,4,Head-to-Head,Offline Draft,"QB, WR, RB, TE, K, BN, BN, IR",No,No,"November 30, 2024",Continual rolling list,No maximum,No maximum,No,Yes,Yes,Higher seed wins
+2025,4,Head-to-Head,Offline Draft,"QB, WR, RB, TE, K, BN, BN, IR",No,No,"November 22, 2025",Continual rolling list,No maximum,No maximum,No,Yes,Yes,Higher seed wins

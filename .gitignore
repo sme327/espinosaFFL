@@ -1,0 +1,35 @@
+# Yahoo session — never commit
+.yahoo_cookies.json
+
+# IDE
+.idea/
+
+# Contains real email addresses — keep private
+data/season_managers.csv
+
+# Debug HTML from scraper
+debug_*.html
+
+# Claude project memory
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Streamlit local config (secrets, etc.)
+.streamlit/secrets.toml
+
+# iCloud
+*.icloud
+
+# Large reference files (re-downloadable)
+data/ref_nfl_players.csv

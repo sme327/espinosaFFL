@@ -1,0 +1,85 @@
+season,round,pick_in_round,overall_pick,team_name,player_name,is_keeper,auction_price
+2023,1,1,1,Daphne's Magic,Aaron Rodgers,False,0
+2023,1,2,2,Pinkie pink 🏈,Geno Smith,False,0
+2023,1,3,3,dad will win,Kenneth Walker III,False,0
+2023,1,4,4,Marvelous Mamma,Tyler Lockett,False,0
+2023,2,1,5,Marvelous Mamma,Patrick Mahomes,False,0
+2023,2,2,6,dad will win,Garrett Wilson,False,0
+2023,2,3,7,Pinkie pink 🏈,Dalvin Cook,False,0
+2023,2,4,8,Daphne's Magic,DK Metcalf,False,0
+2023,3,1,9,Daphne's Magic,Aaron Jones Sr.,False,0
+2023,3,2,10,Pinkie pink 🏈,Christian Watson,False,0
+2023,3,3,11,dad will win,Luke Musgrave,False,0
+2023,3,4,12,Marvelous Mamma,AJ Dillon,False,0
+2023,4,1,13,Marvelous Mamma,Tyler Conklin,False,0
+2023,4,2,14,dad will win,Jordan Love,False,0
+2023,4,3,15,Pinkie pink 🏈,Mark Andrews,False,0
+2023,4,4,16,Daphne's Magic,Travis Kelce,False,0
+2023,5,1,17,Daphne's Magic,Harrison Butker,False,0
+2023,5,2,18,Pinkie pink 🏈,Jason Sanders,False,0
+2023,5,3,19,dad will win,Jason Myers,False,0
+2023,5,4,20,Marvelous Mamma,Mason Crosby,False,0
+2023,6,1,21,Marvelous Mamma,--empty--,False,0
+2023,6,2,22,dad will win,--empty--,False,0
+2023,6,3,23,Pinkie pink 🏈,--empty--,False,0
+2023,6,4,24,Daphne's Magic,--empty--,False,0
+2023,7,1,25,Daphne's Magic,--empty--,False,0
+2023,7,2,26,Pinkie pink 🏈,--empty--,False,0
+2023,7,3,27,dad will win,--empty--,False,0
+2023,7,4,28,Marvelous Mamma,--empty--,False,0
+2024,1,1,1,Pinkie pink 🏈,Evan Engram,False,0
+2024,1,2,2,dad will win,Jordan Love,False,0
+2024,1,3,3,Marvelous Mamma,DK Metcalf,False,0
+2024,1,4,4,Daphne's Magic,Aaron Rodgers,False,0
+2024,2,1,5,Daphne's Magic,CeeDee Lamb,False,0
+2024,2,2,6,Marvelous Mamma,Patrick Mahomes,False,0
+2024,2,3,7,dad will win,Breece Hall,False,0
+2024,2,4,8,Pinkie pink 🏈,Tua Tagovailoa,False,0
+2024,3,1,9,Pinkie pink 🏈,Jaxon Smith-Njigba,False,0
+2024,3,2,10,dad will win,Mark Andrews,False,0
+2024,3,3,11,Marvelous Mamma,Christian McCaffrey,False,0
+2024,3,4,12,Daphne's Magic,Travis Etienne Jr.,False,0
+2024,4,1,13,Daphne's Magic,David Njoku,False,0
+2024,4,2,14,Marvelous Mamma,Sam LaPorta,False,0
+2024,4,3,15,dad will win,Amon-Ra St. Brown,False,0
+2024,4,4,16,Pinkie pink 🏈,Alvin Kamara,False,0
+2024,5,1,17,Pinkie pink 🏈,Brandon Aubrey,False,0
+2024,5,2,18,dad will win,Harrison Butker,False,0
+2024,5,3,19,Marvelous Mamma,Justin Tucker,False,0
+2024,5,4,20,Daphne's Magic,Jason Myers,False,0
+2024,6,1,21,Daphne's Magic,Tyreek Hill,False,0
+2024,6,2,22,Marvelous Mamma,DJ Moore,False,0
+2024,6,3,23,dad will win,Tyler Lockett,False,0
+2024,6,4,24,Pinkie pink 🏈,Chuba Hubbard,False,0
+2024,7,1,25,Pinkie pink 🏈,Puka Nacua,False,0
+2024,7,2,26,dad will win,Saquon Barkley,False,0
+2024,7,3,27,Marvelous Mamma,Matthew Stafford,False,0
+2024,7,4,28,Daphne's Magic,Jared Goff,False,0
+2025,1,1,1,Daphne's Magic,Aaron Rodgers,False,0
+2025,1,2,2,dad will win,Baker Mayfield,False,0
+2025,1,3,3,Marvelous Mamma,DK Metcalf,False,0
+2025,1,4,4,Pinkie pink 🏈,Tyreek Hill,False,0
+2025,2,1,5,Pinkie pink 🏈,Trey McBride,False,0
+2025,2,2,6,Marvelous Mamma,Kenneth Walker III,False,0
+2025,2,3,7,dad will win,Jaxon Smith-Njigba,False,0
+2025,2,4,8,Daphne's Magic,Josh Jacobs,False,0
+2025,3,1,9,Daphne's Magic,Harrison Butker,False,0
+2025,3,2,10,dad will win,Kyren Williams,False,0
+2025,3,3,11,Marvelous Mamma,Patrick Mahomes,False,0
+2025,3,4,12,Pinkie pink 🏈,Sam Darnold,False,0
+2025,4,1,13,Pinkie pink 🏈,Travis Etienne Jr.,False,0
+2025,4,2,14,Marvelous Mamma,Brock Bowers,False,0
+2025,4,3,15,dad will win,Tucker Kraft,False,0
+2025,4,4,16,Daphne's Magic,Dalton Kincaid,False,0
+2025,5,1,17,Daphne's Magic,Ja'Marr Chase,False,0
+2025,5,2,18,dad will win,Evan McPherson,False,0
+2025,5,3,19,Marvelous Mamma,Jake Elliott,False,0
+2025,5,4,20,Pinkie pink 🏈,Ryan Fitzgerald,False,0
+2025,6,1,21,Pinkie pink 🏈,Justin Herbert,False,0
+2025,6,2,22,Marvelous Mamma,Cooper Kupp,False,0
+2025,6,3,23,dad will win,Saquon Barkley,False,0
+2025,6,4,24,Daphne's Magic,Justin Jefferson,False,0
+2025,7,1,25,Daphne's Magic,Jalen Hurts,False,0
+2025,7,2,26,dad will win,Lamar Jackson,False,0
+2025,7,3,27,Marvelous Mamma,Caleb Williams,False,0
+2025,7,4,28,Pinkie pink 🏈,Bijan Robinson,False,0
