@@ -1328,6 +1328,73 @@ _CSS += """
 }
 """
 
+# ── PHASE 4 — Exploration Homepage ───────────────────────────────────────────
+_CSS += """
+
+/* Explore cards: full-width illustration banner, flex column */
+.hq-explore-card {
+    padding: 0 !important;
+    min-height: 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+.hq-explore-card-body {
+    padding: 1rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+}
+/* Phase 3 room backgrounds move into .hq-room-illo; card body stays cream */
+.hq-room-trophy, .hq-room-scrapbook, .hq-room-locker,
+.hq-room-rivalry, .hq-room-achievement, .hq-room-draft {
+    background: #FFFDF8 !important;
+}
+
+/* Illustration banner */
+.hq-room-illo {
+    height: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+.hq-illo-main {
+    font-size: 4.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.18));
+}
+.hq-illo-side { font-size: 1.8rem; opacity: 0.7; }
+
+/* Enter button */
+.hq-enter-btn {
+    margin-top: auto;
+    padding: 0.5rem 1.3rem;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 0.82rem;
+    color: white;
+    display: inline-block;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    transition: all 0.15s;
+}
+
+/* Draft Room */
+.hq-room-draft { border-top-color: #7B5EA7 !important; }
+
+@media (max-width: 768px) {
+    .hq-room-illo    { height: 110px; }
+    .hq-illo-main    { font-size: 3.2rem; }
+    .hq-illo-side    { font-size: 1.4rem; }
+    .hq-explore-card { min-height: 220px !important; }
+}
+"""
+
 
 def _fix_html(html: str) -> str:
     """Make HTML safe for st.markdown's CommonMark parser.
