@@ -6,7 +6,7 @@ from utils.data import (
     MANAGER_COLORS, MANAGER_EMOJI, RIVALRY_PAIRS,
     get_all_rivalries,
 )
-from utils.styles import inject_css, render_nav, render_page_header, section_header
+from utils.styles import inject_css, render_nav, render_page_header, section_header, md_html
 
 st.set_page_config(
     page_title="Rivalry Arena · Espinosa FFL",
@@ -221,16 +221,16 @@ def rivalry_card_html(rv: dict) -> str:
 with col_left:
     section_header("Rivalries", "Left bracket")
     for rv in left_rivals:
-        st.markdown(rivalry_card_html(rv), unsafe_allow_html=True)
+        md_html(rivalry_card_html(rv))
 
 with col_right:
     section_header("", "Right bracket")
     for rv in right_rivals:
-        st.markdown(rivalry_card_html(rv), unsafe_allow_html=True)
+        md_html(rivalry_card_html(rv))
 
 # ── PLAYOFF RIVALRY SUMMARY ───────────────────────────────────────────────
 
-st.markdown("<div style='margin-top:1rem'></div>", unsafe_allow_html=True)
+md_html("<div style='margin-top:1rem'></div>")
 section_header("Playoff Encounters", "When it really mattered")
 
 # Collect all playoff meetings across all rivalries
@@ -283,20 +283,6 @@ if all_po:
         ])
 
     from utils.styles import html_table
-    st.markdown(
-        html_table(
-            ["Season", "Round", "Matchup", "Winner", "Score", "Margin"],
-            po_rows,
-        ),
-        unsafe_allow_html=True,
-    )
+    md_html(html_table(["Season", "Round", "Matchup", "Winner", "Score", "Margin"], po_rows))
 
-st.markdown(
-    """<div style="padding:2.5rem 0 1.5rem;text-align:center;">
-        <div style="font-family:'Nunito',sans-serif;font-size:0.72rem;color:#BBB;
-                    font-weight:700;letter-spacing:2px;text-transform:uppercase;">
-            Espinosa FFL &bull; Rivalry Arena
-        </div>
-    </div>""",
-    unsafe_allow_html=True,
-)
+md_html("<div style=\"padding:2.5rem 0 1.5rem;text-align:center;\"><div style=\"font-family:'Nunito',sans-serif;font-size:0.72rem;color:#BBB;font-weight:700;letter-spacing:2px;text-transform:uppercase;\">Espinosa FFL &bull; Rivalry Arena</div></div>")

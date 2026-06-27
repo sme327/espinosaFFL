@@ -1425,8 +1425,9 @@ def _fix_html(html: str) -> str:
         else:
             result.append(ch)
     html = "".join(result)
-    # Remove blank lines (they terminate HTML block mode)
-    html = re.sub(r"\n[ \t]*\n", "\n", html)
+    # Remove blank lines (they terminate HTML block mode).
+    # Use ([ \t]*\n)+ to collapse consecutive blank/whitespace-only lines in one pass.
+    html = re.sub(r"\n([ \t]*\n)+", "\n", html)
     return html
 
 

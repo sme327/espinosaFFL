@@ -10,7 +10,7 @@ from utils.data import (
 )
 from utils.styles import (
     inject_css, render_nav, render_page_header,
-    section_header, manager_avatar_html, html_table,
+    section_header, manager_avatar_html, html_table, md_html,
 )
 
 st.set_page_config(
@@ -62,57 +62,38 @@ for col, manager in zip(cols, MANAGER_ORDER):
     champ_yr_txt   = ", ".join(str(y) for y in champ_yrs) if champ_yrs else "—"
     runner_yr_txt  = ", ".join(str(y) for y in runner_yrs) if runner_yrs else "—"
 
+    runner_html = (
+        f"<div style='margin-top:0.4rem;'><div style='font-family:Nunito,sans-serif;font-size:0.72rem;color:#AAA;font-weight:800;text-transform:uppercase;letter-spacing:1px;'>Runner-Up</div><div style='font-family:Nunito,sans-serif;font-size:0.82rem;color:#888;font-weight:700;margin-top:0.1rem;'>{runner_yr_txt}</div></div>"
+        if runner_yrs else ""
+    )
+    bestweek_html = (
+        f"<div style='margin-top:0.4rem;'><div style='font-family:Nunito,sans-serif;font-size:0.72rem;color:#AAA;font-weight:800;text-transform:uppercase;letter-spacing:1px;'>Best Single Week</div><div style='font-family:Nunito,sans-serif;font-size:0.78rem;color:#555;font-weight:700;margin-top:0.1rem;'>{best_wk_txt}</div></div>"
+        if best_wk_txt else ""
+    )
     with col:
-        st.markdown(
-            f"""<div class="hq-profile-card" style="border-top-color:{color};">
-                <div class="hq-avatar" style="background:{color};width:76px;height:76px;
-                        font-size:2.3rem;margin:0 auto 0.7rem;border-radius:50%;
-                        display:flex;align-items:center;justify-content:center;">
-                    {emoji}
-                </div>
-                <div class="hq-profile-name" style="color:{color};">{manager}</div>
-                <div class="hq-profile-team">"{team}"</div>
-
-                <div class="hq-stat-grid">
-                    <div class="hq-stat-box">
-                        <div class="hq-stat-value" style="color:{color};">{wins}</div>
-                        <div class="hq-stat-label">Career Wins</div>
-                    </div>
-                    <div class="hq-stat-box">
-                        <div class="hq-stat-value" style="color:{color};">{int(win_pct*100)}%</div>
-                        <div class="hq-stat-label">Win Rate</div>
-                    </div>
-                    <div class="hq-stat-box">
-                        <div class="hq-stat-value" style="color:{color};">{champ_ct}</div>
-                        <div class="hq-stat-label">Championships</div>
-                    </div>
-                    <div class="hq-stat-box">
-                        <div class="hq-stat-value" style="color:{color};">{ppg:.0f}</div>
-                        <div class="hq-stat-label">Avg PPG</div>
-                    </div>
-                </div>
-
-                <div style="margin-top:0.75rem;border-top:1px solid #EEE8E0;padding-top:0.6rem;">
-                    <div style="font-family:'Nunito',sans-serif;font-size:0.72rem;color:#AAA;
-                                font-weight:800;text-transform:uppercase;letter-spacing:1px;">
-                        Titles
-                    </div>
-                    <div style="font-family:'Nunito',sans-serif;font-size:0.82rem;
-                                color:#444;font-weight:700;margin-top:0.1rem;">
-                        {champ_yr_txt}
-                    </div>
-                </div>
-
-                {"<div style='margin-top:0.4rem;'><div style='font-family:Nunito,sans-serif;font-size:0.72rem;color:#AAA;font-weight:800;text-transform:uppercase;letter-spacing:1px;'>Runner-Up</div><div style='font-family:Nunito,sans-serif;font-size:0.82rem;color:#888;font-weight:700;margin-top:0.1rem;'>" + runner_yr_txt + "</div></div>" if runner_yrs else ""}
-
-                {"<div style='margin-top:0.4rem;'><div style='font-family:Nunito,sans-serif;font-size:0.72rem;color:#AAA;font-weight:800;text-transform:uppercase;letter-spacing:1px;'>Best Single Week</div><div style='font-family:Nunito,sans-serif;font-size:0.78rem;color:#555;font-weight:700;margin-top:0.1rem;'>" + best_wk_txt + "</div></div>" if best_wk_txt else ""}
-            </div>""",
-            unsafe_allow_html=True,
+        md_html(
+            f'<div class="hq-profile-card" style="border-top-color:{color};">'
+            f'<div class="hq-avatar" style="background:{color};width:76px;height:76px;font-size:2.3rem;margin:0 auto 0.7rem;border-radius:50%;display:flex;align-items:center;justify-content:center;">{emoji}</div>'
+            f'<div class="hq-profile-name" style="color:{color};">{manager}</div>'
+            f'<div class="hq-profile-team">"{team}"</div>'
+            f'<div class="hq-stat-grid">'
+            f'<div class="hq-stat-box"><div class="hq-stat-value" style="color:{color};">{wins}</div><div class="hq-stat-label">Career Wins</div></div>'
+            f'<div class="hq-stat-box"><div class="hq-stat-value" style="color:{color};">{int(win_pct*100)}%</div><div class="hq-stat-label">Win Rate</div></div>'
+            f'<div class="hq-stat-box"><div class="hq-stat-value" style="color:{color};">{champ_ct}</div><div class="hq-stat-label">Championships</div></div>'
+            f'<div class="hq-stat-box"><div class="hq-stat-value" style="color:{color};">{ppg:.0f}</div><div class="hq-stat-label">Avg PPG</div></div>'
+            f'</div>'
+            f'<div style="margin-top:0.75rem;border-top:1px solid #EEE8E0;padding-top:0.6rem;">'
+            f'<div style="font-family:\'Nunito\',sans-serif;font-size:0.72rem;color:#AAA;font-weight:800;text-transform:uppercase;letter-spacing:1px;">Titles</div>'
+            f'<div style="font-family:\'Nunito\',sans-serif;font-size:0.82rem;color:#444;font-weight:700;margin-top:0.1rem;">{champ_yr_txt}</div>'
+            f'</div>'
+            f'{runner_html}'
+            f'{bestweek_html}'
+            f'</div>'
         )
 
 # ── SEASON-BY-SEASON ──────────────────────────────────────────────────────
 
-st.markdown("<div style='margin-top:1.5rem'></div>", unsafe_allow_html=True)
+md_html("<div style='margin-top:1.5rem'></div>")
 section_header("Year-by-Year Records", "Regular season (weeks 1–15) for each manager")
 
 # Build a comparison table: seasons as columns, managers as rows
@@ -149,11 +130,11 @@ for manager in MANAGER_ORDER:
     table_rows.append(row)
 
 headers = ["Manager"] + [str(s) for s in all_seasons]
-st.markdown(html_table(headers, table_rows), unsafe_allow_html=True)
+md_html(html_table(headers, table_rows))
 
 # ── HEAD-TO-HEAD MATRIX ───────────────────────────────────────────────────
 
-st.markdown("<div style='margin-top:1.5rem'></div>", unsafe_allow_html=True)
+md_html("<div style='margin-top:1.5rem'></div>")
 section_header("Head-to-Head Matrix", "Regular season all-time records")
 
 # Build the H2H matrix
@@ -178,19 +159,13 @@ for mgr_a in MANAGER_ORDER:
             row.append((f"{wins}–{losses}", cls))
     h2h_rows.append(row)
 
-st.markdown(html_table(h2h_headers, h2h_rows), unsafe_allow_html=True)
+md_html(html_table(h2h_headers, h2h_rows))
 
-st.markdown(
-    """<div style="font-family:'Nunito',sans-serif;font-size:0.72rem;color:#BBB;
-                margin-top:0.5rem;">
-        Regular season only (weeks 1–15). Playoff records tracked separately in Rivalry Arena.
-    </div>""",
-    unsafe_allow_html=True,
-)
+md_html("<div style=\"font-family:'Nunito',sans-serif;font-size:0.72rem;color:#BBB;margin-top:0.5rem;\">Regular season only (weeks 1–15). Playoff records tracked separately in Rivalry Arena.</div>")
 
 # ── CAREER TOTALS TABLE ───────────────────────────────────────────────────
 
-st.markdown("<div style='margin-top:1.5rem'></div>", unsafe_allow_html=True)
+md_html("<div style='margin-top:1.5rem'></div>")
 section_header("Career Totals", "All-time regular season stats")
 
 at_df   = get_all_time_standings()
@@ -208,20 +183,6 @@ for _, row in at_df.iterrows():
         ("🏆 " * champ_ct if champ_ct else "—", "center"),
     ])
 
-st.markdown(
-    html_table(
-        ["Manager", "Record", "Win %", "Total PF", "Titles"],
-        ct_rows,
-    ),
-    unsafe_allow_html=True,
-)
+md_html(html_table(["Manager", "Record", "Win %", "Total PF", "Titles"], ct_rows))
 
-st.markdown(
-    """<div style="padding:2.5rem 0 1.5rem;text-align:center;">
-        <div style="font-family:'Nunito',sans-serif;font-size:0.72rem;color:#BBB;
-                    font-weight:700;letter-spacing:2px;text-transform:uppercase;">
-            Espinosa FFL &bull; Locker Room
-        </div>
-    </div>""",
-    unsafe_allow_html=True,
-)
+md_html("<div style=\"padding:2.5rem 0 1.5rem;text-align:center;\"><div style=\"font-family:'Nunito',sans-serif;font-size:0.72rem;color:#BBB;font-weight:700;letter-spacing:2px;text-transform:uppercase;\">Espinosa FFL &bull; Locker Room</div></div>")
