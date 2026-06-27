@@ -1186,11 +1186,62 @@ div[data-baseweb="select"] {
 """
 
 
+def _fix_html(html: str) -> str:
+    """Make HTML safe for st.markdown's CommonMark parser.
+
+    st.markdown uses CommonMark, which has two rules that break complex HTML:
+    1. An opening tag must be complete (end with >) on its FIRST line to trigger
+       HTML block mode — multi-line style="" attributes break this.
+    2. A blank line anywhere inside an HTML block terminates it — subsequent tags
+       are then Markdown-escaped and shown as raw text.
+
+    This function collapses newlines inside tags and removes blank lines.
+    """
+    import re
+    # Remove HTML comments (they can confuse the block parser)
+    html = re.sub(r"<!--.*?-->", "", html, flags=re.DOTALL)
+    # Collapse newlines that appear inside an opening/closing tag
+    result: list[str] = []
+    in_tag = False
+    for ch in html:
+        if ch == "<" and not in_tag:
+            in_tag = True
+            result.append(ch)
+        elif ch == ">" and in_tag:
+            in_tag = False
+            result.append(ch)
+        elif in_tag and ch == "\n":
+            result.append(" ")   # newline inside tag → space
+        else:
+            result.append(ch)
+    html = "".join(result)
+    # Remove blank lines (they terminate HTML block mode)
+    html = re.sub(r"\n[ \t]*\n", "\n", html)
+    return html
+
+
+def md_html(html: str) -> None:
+    """Render HTML via st.markdown after fixing CommonMark HTML block issues."""
+    st.markdown(_fix_html(html), unsafe_allow_html=True)
+
+
 def inject_css() -> None:
-    st.markdown(
-        f'<link href="{_FONTS_URL}" rel="stylesheet">'
-        f"<style>{_CSS}</style>",
-        unsafe_allow_html=True,
+    css = _CSS.replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${")
+    st.html(
+        f"""<script>
+(function() {{
+    if (document.getElementById('hq-css')) return;
+    var l = document.createElement('link');
+    l.rel  = 'stylesheet';
+    l.href = '{_FONTS_URL}';
+    document.head.appendChild(l);
+    var s = document.createElement('style');
+    s.id = 'hq-css';
+    s.textContent = `{css}`;
+    document.head.appendChild(s);
+}})();
+</script>""",
+        unsafe_allow_javascript=True,
     )
 
 
