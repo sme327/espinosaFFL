@@ -756,6 +756,433 @@ div[data-baseweb="select"] {
     .hq-page-title { font-size: 2.1rem; }
     .hq-champ-name { font-size: 2rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PHASE 2 — Playbook HQ Experience Layer
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── NAV SIGN STYLE (override pill → sign) ─────────────────────── */
+.hq-tab {
+    padding: 7px 15px !important;
+    border-radius: 10px !important;
+    font-size: 0.8rem !important;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.07);
+}
+.hq-tab:hover {
+    box-shadow: 0 4px 0 rgba(10,94,168,0.3) !important;
+    transform: translateY(-2px) !important;
+}
+.hq-tab.active {
+    box-shadow: 0 3px 0 rgba(10,94,168,0.25) !important;
+}
+.hq-tab-soon {
+    border-radius: 10px !important;
+    padding: 7px 14px !important;
+    font-size: 0.78rem !important;
+}
+
+/* ── HERO ─────────────────────────────────────────────────────── */
+/* Image hero: rounded + shadow applied to stImage */
+.hq-hero-img-wrap img,
+.stImage > img {
+    border-radius: 22px !important;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.14) !important;
+}
+
+/* Text-only hero (no image) */
+.hq-hero-text {
+    text-align: center;
+    padding: 3.5rem 2rem 2rem;
+}
+
+.hq-hero-emoji { font-size: 4rem; display: block; margin-bottom: 0.75rem; }
+
+.hq-hero-title-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3.2rem;
+    color: #0A5EA8;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.hq-hero-tagline-text {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.hq-hero-sub-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.75rem;
+    color: #AAA;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0.3rem;
+}
+
+/* ── FEATURED CHAMPION (home page star card) ────────────────────── */
+.hq-champ-featured {
+    background: #FFFDF8;
+    border-radius: 26px;
+    padding: 2.75rem 2.5rem 2.25rem;
+    text-align: center;
+    box-shadow: 0 12px 56px rgba(214,163,25,0.18), 0 4px 24px rgba(0,0,0,0.07);
+    border: 2px solid #D6A319;
+    position: relative;
+    overflow: hidden;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hq-champ-featured::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #D6A319 0%, #F5C842 45%, #D6A319 100%);
+}
+
+/* Confetti corner decorations */
+.hq-confetti-tl {
+    position: absolute;
+    top: 0.9rem; left: 1.1rem;
+    font-size: 1.3rem;
+    opacity: 0.22;
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.hq-confetti-tr {
+    position: absolute;
+    top: 0.9rem; right: 1.1rem;
+    font-size: 1.3rem;
+    opacity: 0.22;
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.hq-champ-featured-trophy { font-size: 6.5rem; display: block; margin-bottom: 0.3rem; }
+
+.hq-champ-featured-label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    color: #D6A319;
+    margin-bottom: 0.1rem;
+}
+
+.hq-champ-featured-name {
+    font-family: 'Fredoka One', cursive;
+    font-size: 4rem;
+    line-height: 1.05;
+    margin: 0.2rem 0 0.1rem;
+}
+
+.hq-champ-featured-team {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #777;
+    font-style: italic;
+}
+
+.hq-champ-featured-score {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+    color: #AAA;
+    margin-top: 0.3rem;
+}
+
+.hq-champ-featured-tagline {
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0.85rem auto 0;
+    max-width: 440px;
+    line-height: 1.45;
+}
+
+/* ── CHALKBOARD QUOTE ─────────────────────────────────────────── */
+.hq-chalkboard {
+    background: #2B4A2B;
+    border-radius: 18px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18), inset 0 0 50px rgba(0,0,0,0.15);
+    border: 4px solid #3D6B3D;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Chalk texture lines */
+.hq-chalkboard::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.hq-chalkboard-icon { font-size: 1.8rem; margin-bottom: 0.6rem; opacity: 0.85; }
+
+.hq-chalkboard-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.35rem;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.35;
+}
+
+.hq-chalkboard-line {
+    width: 60px;
+    height: 2px;
+    background: rgba(255,255,255,0.2);
+    margin: 0.65rem auto 0.5rem;
+    border-radius: 1px;
+}
+
+.hq-chalkboard-attr {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.38);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ── BULLETIN BOARD (What's Happening) ─────────────────────────── */
+.hq-bulletin {
+    background: #FBF4E3;
+    border-radius: 18px;
+    padding: 1.4rem 1.4rem 1.2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07), 0 0 0 2px #E8D9B5;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.hq-bulletin-header {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.05rem;
+    color: #7A5C1E;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hq-bulletin-item {
+    background: white;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: #444;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.03);
+    line-height: 1.35;
+}
+
+.hq-bulletin-item:last-child { margin-bottom: 0; }
+.hq-bulletin-pin { font-size: 0.9rem; flex-shrink: 0; margin-top: 1px; }
+
+/* ── FOOTBALL DIVIDER ─────────────────────────────────────────── */
+.hq-divider-football {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    color: #D9D7CF;
+    font-size: 1.1rem;
+    user-select: none;
+}
+
+.hq-divider-football::before,
+.hq-divider-football::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #E5E0D8;
+}
+
+/* ── TROPHY SHELF ─────────────────────────────────────────────── */
+.hq-trophy-shelf-wrap {
+    background: #FFFDF8;
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    overflow: hidden;
+}
+
+.hq-shelf-label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.1rem;
+}
+
+.hq-shelf-sub {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    color: #AAA;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.hq-shelf-rail {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: nowrap;
+}
+
+.hq-trophy-item {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 0.5rem 1.25rem;
+    transition: transform 0.2s;
+}
+
+.hq-trophy-item:hover { transform: translateY(-4px); }
+
+.hq-trophy-item-icon { font-size: 3.5rem; display: block; line-height: 1; }
+
+.hq-trophy-item-year {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #CCC;
+    margin-top: 0.5rem;
+}
+
+.hq-trophy-item-name {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    margin-top: 0.2rem;
+}
+
+.hq-trophy-item-team {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.68rem;
+    color: #AAA;
+    font-style: italic;
+    margin-top: 0.1rem;
+}
+
+.hq-trophy-item.coming-soon .hq-trophy-item-icon { filter: grayscale(1) opacity(0.25); }
+.hq-trophy-item.coming-soon .hq-trophy-item-name { color: #CCC; }
+
+/* The shelf plank */
+.hq-shelf-plank {
+    height: 10px;
+    background: linear-gradient(180deg, #C8A870 0%, #B08A52 60%, #96703C 100%);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    margin: 0 -1.5rem;
+}
+
+/* ── EXPLORE SECTION ──────────────────────────────────────────── */
+.hq-explore-header {
+    text-align: center;
+    padding: 1rem 0 1.4rem;
+}
+
+.hq-explore-title-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: #333;
+}
+
+.hq-explore-sub {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+.hq-explore-card {
+    background: #FFFDF8;
+    border-radius: 20px;
+    padding: 2rem 1.25rem 1.75rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    text-decoration: none !important;
+    display: block;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.hq-explore-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.11);
+    border-color: #D9D7CF;
+}
+
+.hq-explore-icon { font-size: 3.2rem; display: block; margin-bottom: 0.6rem; }
+
+.hq-explore-room-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 0.25rem;
+}
+
+.hq-explore-room-desc {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.hq-explore-arrow {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+    display: block;
+}
+
+.hq-explore-card.coming-soon {
+    opacity: 0.45;
+    cursor: default;
+}
+
+.hq-explore-card.coming-soon:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    border-color: transparent;
+}
+
+/* ── MOBILE RESPONSIVE (phase 2 additions) ──────────────────────── */
+@media (max-width: 768px) {
+    .hq-champ-featured-name { font-size: 2.8rem; }
+    .hq-champ-featured-trophy { font-size: 5rem; }
+    .hq-shelf-rail { flex-wrap: wrap; }
+    .hq-trophy-item { min-width: 120px; }
+}
 """
 
 
