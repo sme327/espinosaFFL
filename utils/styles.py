@@ -1,7 +1,25 @@
 """CSS injection and reusable HTML components — Playbook HQ design."""
 from __future__ import annotations
+import base64 as _b64
 import streamlit as st
 from utils.data import MANAGER_COLORS, MANAGER_LIGHT_COLORS, MANAGER_EMOJI
+
+# ── Playbook background texture (X's and O's at ~10% fill opacity) ──────────
+_BG_SVG = (
+    b"<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'>"
+    b"<text x='8' y='50' font-size='28' fill='#4A6741' fill-opacity='0.11'"
+    b" font-family='Georgia,serif' font-weight='bold'>X</text>"
+    b"<circle cx='92' cy='90' r='16' fill='none' stroke='#4A6741'"
+    b" stroke-opacity='0.08' stroke-width='2.5'/>"
+    b"</svg>"
+)
+_BG_URI = "data:image/svg+xml;base64," + _b64.b64encode(_BG_SVG).decode()
+_BG_CSS = (
+    ".stApp,.main{"
+    f"background-image:url('{_BG_URI}') !important;"
+    "background-repeat:repeat !important;"
+    "}"
+)
 
 _FONTS_URL = (
     "https://fonts.googleapis.com/css2?"
@@ -1185,6 +1203,131 @@ div[data-baseweb="select"] {
 }
 """
 
+# ── PHASE 3 — Atmosphere, Polish & Premium Feel ─────────────────────────────
+_CSS += """
+
+/* ── BLOCK CONTAINER — reduce top padding ──────────────────────────────────── */
+.main .block-container { padding-top: 80px !important; }
+
+/* ── NAV — hand-painted wooden clubhouse signs ─────────────────────────────── */
+.hq-nav {
+    background: linear-gradient(180deg, #FFFAF0 0%, #F2E8D0 100%) !important;
+    border-bottom: 3px solid #C8A870 !important;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.09), inset 0 -1px 0 rgba(200,168,112,0.4) !important;
+}
+.hq-tab {
+    background: linear-gradient(180deg, #FFFDF5 0%, #EFE4C8 100%) !important;
+    border-color: #C8A870 !important;
+    border-radius: 7px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06), 0 2px 0 rgba(155,115,50,0.45) !important;
+    color: #5A4428 !important;
+    font-weight: 900 !important;
+    font-size: 0.78rem !important;
+    padding: 7px 14px !important;
+    letter-spacing: 0.2px;
+}
+.hq-tab:hover {
+    background: linear-gradient(180deg, #1472C8 0%, #0A5EA8 100%) !important;
+    color: white !important;
+    border-color: #074899 !important;
+    box-shadow: 0 4px 0 rgba(4,48,110,0.4), 0 7px 20px rgba(10,94,168,0.28) !important;
+    transform: translateY(-2px) !important;
+}
+.hq-tab.active {
+    background: linear-gradient(180deg, #1472C8 0%, #0A5EA8 100%) !important;
+    color: white !important;
+    border-color: #074899 !important;
+    box-shadow: 0 3px 0 rgba(4,48,110,0.35), 0 5px 16px rgba(10,94,168,0.25) !important;
+}
+.hq-tab-soon {
+    border-radius: 7px !important;
+    border-color: #D9D0BC !important;
+    color: #B8A890 !important;
+    font-size: 0.75rem !important;
+    padding: 7px 13px !important;
+}
+
+/* ── CHAMPION CARD — trophy room centerpiece ───────────────────────────────── */
+.hq-champ-featured {
+    background: linear-gradient(160deg, #FFFEF9 0%, #FFFBF0 60%, #FFF8E4 100%) !important;
+    box-shadow: 0 20px 72px rgba(214,163,25,0.22), 0 8px 32px rgba(0,0,0,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.95) !important;
+}
+.hq-champ-featured::before {
+    height: 9px !important;
+    background: linear-gradient(90deg, #A07010 0%, #D6A319 22%, #F5C842 50%,
+                #D6A319 78%, #A07010 100%) !important;
+}
+.hq-champ-featured-trophy {
+    font-size: 7rem !important;
+    text-shadow: 0 0 28px rgba(214,163,25,0.55), 0 0 56px rgba(214,163,25,0.22) !important;
+}
+.hq-champ-featured-name  { font-size: 4.2rem !important; }
+
+/* ── CHALK-LINE SECTION DIVIDER ─────────────────────────────────────────────── */
+.hq-chalk-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0.75rem 0;
+    user-select: none;
+}
+.hq-chalk-divider::before,
+.hq-chalk-divider::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #C8A870 35%, #C8A870 65%, transparent 100%);
+    opacity: 0.4;
+    border-radius: 1px;
+}
+.hq-chalk-divider-icon {
+    font-size: 1rem;
+    opacity: 0.65;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+}
+
+/* ── LEADERBOARD — warm gold top ────────────────────────────────────────────── */
+.hq-lb-gold { background: linear-gradient(160deg,#FFFBEC 0%,#FFF8E0 100%) !important; }
+
+/* ── TROPHY SHELF ───────────────────────────────────────────────────────────── */
+.hq-trophy-shelf-wrap {
+    background: linear-gradient(180deg, #FFFDF8 0%, #FFF8EC 100%) !important;
+    border-top: 5px solid #C8A870 !important;
+}
+.hq-trophy-item-icon { filter: drop-shadow(0 2px 8px rgba(214,163,25,0.28)); }
+
+/* ── EXPLORE CARDS — room entrances ─────────────────────────────────────────── */
+.hq-explore-card {
+    min-height: 185px !important;
+    border-top-width: 4px !important;
+    border-top-style: solid !important;
+    border-top-color: #D9D7CF !important;
+    border-radius: 20px !important;
+    transition: all 0.22s ease !important;
+}
+.hq-explore-card:hover {
+    transform: translateY(-7px) !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12) !important;
+}
+.hq-explore-icon       { font-size: 3.6rem !important; }
+.hq-explore-room-title { font-size: 1.05rem !important; font-weight: 900 !important; }
+
+/* Per-room backgrounds and accent colours */
+.hq-room-trophy      { background: linear-gradient(160deg,#FFFBEC 0%,#FFF3C4 100%); border-top-color: #D6A319 !important; }
+.hq-room-scrapbook   { background: linear-gradient(160deg,#EEF5FF 0%,#DAEAFF 100%); border-top-color: #0A5EA8 !important; }
+.hq-room-locker      { background: linear-gradient(160deg,#EEF7EF 0%,#D4EDD4 100%); border-top-color: #1F5E3B !important; }
+.hq-room-rivalry     { background: linear-gradient(160deg,#FEF0F8 0%,#FAD5EE 100%); border-top-color: #E86AA6 !important; }
+.hq-room-achievement { background: #F4F2EF; border-top-color: #BBB !important; }
+
+/* ── MOBILE ─────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .hq-champ-featured-trophy { font-size: 5.5rem !important; }
+    .hq-champ-featured-name   { font-size: 3rem !important; }
+    .hq-explore-card          { min-height: 150px !important; }
+}
+"""
+
 
 def _fix_html(html: str) -> str:
     """Make HTML safe for st.markdown's CommonMark parser.
@@ -1226,7 +1369,8 @@ def md_html(html: str) -> None:
 
 
 def inject_css() -> None:
-    css = _CSS.replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${")
+    full_css = _CSS + _BG_CSS
+    css = full_css.replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${")
     st.html(
         f"""<script>
 (function() {{

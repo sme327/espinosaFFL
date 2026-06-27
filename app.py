@@ -55,11 +55,6 @@ else:
 </div>"""
     )
 
-st.markdown("<div style='margin-top:0.25rem'></div>", unsafe_allow_html=True)
-
-# ── FOOTBALL DIVIDER ───────────────────────────────────────────────────────
-st.markdown('<div class="hq-divider-football">🏈</div>', unsafe_allow_html=True)
-
 # ═══════════════════════════════════════════════════════════════════════════
 # FEATURED CHAMPION — the star of the page
 # ═══════════════════════════════════════════════════════════════════════════
@@ -84,8 +79,6 @@ with champ_col:
 <div style="text-align:center;margin-top:1.25rem;"><a href="/champions" target="_self" style="{btn_style}">View the Trophy Room →</a></div>
 </div>"""
     )
-
-st.markdown("<div style='margin-top:1.5rem'></div>", unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # LEADERBOARD + RIVALRY  (equal columns, smaller than champion)
@@ -119,7 +112,7 @@ with col_lb:
     lb_wrap = "background:#FFFDF8;border-radius:18px;padding:1.4rem 1.3rem;box-shadow:0 4px 20px rgba(0,0,0,0.07);border-top:5px solid #D6A319;height:100%;"
     lnk_style = "font-family:'Nunito',sans-serif;font-weight:800;font-size:0.76rem;color:#0A5EA8;text-decoration:none;border-bottom:2px solid #D9D7CF;padding-bottom:1px;"
     md_html(
-        f"""<div style="{lb_wrap}">
+        f"""<div class="hq-lb-gold" style="{lb_wrap}">
 <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
 <span style="font-size:1.5rem;">🏟️</span>
 <div>
@@ -187,7 +180,7 @@ with col_rival:
     )
 
 # ── DIVIDER ────────────────────────────────────────────────────────────────
-st.markdown('<div class="hq-divider-football" style="margin:1.6rem 0;">🏈</div>', unsafe_allow_html=True)
+md_html('<div class="hq-chalk-divider"><span class="hq-chalk-divider-icon">🏈</span></div>')
 
 # ═══════════════════════════════════════════════════════════════════════════
 # BULLETIN BOARD + CHALKBOARD
@@ -218,7 +211,7 @@ with col_chalk:
     )
 
 # ── DIVIDER ────────────────────────────────────────────────────────────────
-st.markdown('<div class="hq-divider-football" style="margin:1.6rem 0;">🏈</div>', unsafe_allow_html=True)
+md_html('<div class="hq-chalk-divider"><span class="hq-chalk-divider-icon">🏈</span></div>')
 
 # ═══════════════════════════════════════════════════════════════════════════
 # TROPHY SHELF
@@ -260,7 +253,7 @@ md_html(
 )
 
 # ── DIVIDER ────────────────────────────────────────────────────────────────
-st.markdown('<div class="hq-divider-football" style="margin:1.6rem 0;">🏈</div>', unsafe_allow_html=True)
+md_html('<div class="hq-chalk-divider"><span class="hq-chalk-divider-icon">🏈</span></div>')
 
 # ═══════════════════════════════════════════════════════════════════════════
 # EXPLORE THE CLUBHOUSE
@@ -273,11 +266,11 @@ md_html(
 )
 
 ROOMS = [
-    {"icon": "🏆", "title": "Trophy Room",      "desc": "Every champion. Every season. Every memory.",        "href": "/champions",        "color": "#D6A319", "soon": False},
-    {"icon": "📖", "title": "Season Scrapbook", "desc": "Relive the standings, playoffs, and drafts.",        "href": "/season_archive",   "color": "#0A5EA8", "soon": False},
-    {"icon": "👥", "title": "Locker Room",       "desc": "Manager profiles, career stats, and rivalries.",    "href": "/manager_profiles", "color": "#1F5E3B", "soon": False},
-    {"icon": "🥊", "title": "Rivalry Arena",     "desc": "Every grudge. Every bragging right.",               "href": "/rivalries",        "color": "#E86AA6", "soon": False},
-    {"icon": "🎯", "title": "Achievement Wall",  "desc": "Badges, stickers, and unlockables. Coming soon.",  "href": "#",                 "color": "#AAA",    "soon": True},
+    {"icon": "🏆", "title": "Trophy Room",      "desc": "Every champion. Every season. Every memory.",        "href": "/champions",        "color": "#D6A319", "soon": False, "room_class": "hq-room-trophy"},
+    {"icon": "📖", "title": "Season Scrapbook", "desc": "Relive the standings, playoffs, and drafts.",        "href": "/season_archive",   "color": "#0A5EA8", "soon": False, "room_class": "hq-room-scrapbook"},
+    {"icon": "👥", "title": "Locker Room",       "desc": "Manager profiles, career stats, and rivalries.",    "href": "/manager_profiles", "color": "#1F5E3B", "soon": False, "room_class": "hq-room-locker"},
+    {"icon": "🥊", "title": "Rivalry Arena",     "desc": "Every grudge. Every bragging right.",               "href": "/rivalries",        "color": "#E86AA6", "soon": False, "room_class": "hq-room-rivalry"},
+    {"icon": "🎯", "title": "Achievement Wall",  "desc": "Badges, stickers, and unlockables. Coming soon.",  "href": "#",                 "color": "#AAA",    "soon": True,  "room_class": "hq-room-achievement"},
 ]
 
 explore_cols = st.columns(5, gap="medium")
@@ -290,7 +283,7 @@ for col, room in zip(explore_cols, ROOMS):
         title_c  = "#AAA" if room["soon"] else "#222"
         # Wrap <a> in <div> so the block-level <div> triggers CommonMark HTML block mode
         md_html(
-            f'<div><a href="{href}"{target} class="hq-explore-card{soon_cls}">'
+            f'<div><a href="{href}"{target} class="hq-explore-card {room["room_class"]}{soon_cls}">'
             f'<span class="hq-explore-icon">{room["icon"]}</span>'
             f'<div class="hq-explore-room-title" style="color:{title_c};">{room["title"]}</div>'
             f'<div class="hq-explore-room-desc">{room["desc"]}</div>'
