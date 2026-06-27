@@ -1187,22 +1187,10 @@ div[data-baseweb="select"] {
 
 
 def inject_css() -> None:
-    css = _CSS.replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${")
-    st.html(
-        f"""<script>
-(function() {{
-    if (document.getElementById('hq-css')) return;
-    var l = document.createElement('link');
-    l.rel  = 'stylesheet';
-    l.href = '{_FONTS_URL}';
-    document.head.appendChild(l);
-    var s = document.createElement('style');
-    s.id = 'hq-css';
-    s.textContent = `{css}`;
-    document.head.appendChild(s);
-}})();
-</script>""",
-        unsafe_allow_javascript=True,
+    st.markdown(
+        f'<link href="{_FONTS_URL}" rel="stylesheet">'
+        f"<style>{_CSS}</style>",
+        unsafe_allow_html=True,
     )
 
 
