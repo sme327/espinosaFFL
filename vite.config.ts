@@ -1,7 +1,7 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
 
-const LOCAL_D1_DATABASE_ID = "00000000-0000-4000-8000-000000000000";
+const CLUBHOUSE_D1_DATABASE_ID = "bb3406d9-aa95-45ae-8364-7de55f7df574";
 
 export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
@@ -14,7 +14,7 @@ export default defineConfig(async () => {
         config: {
           main: "./worker/index.ts",
           compatibility_flags: ["nodejs_compat"],
-          d1_databases: [{ binding: "DB", database_name: "espinosa-ffl-clubhouse", database_id: LOCAL_D1_DATABASE_ID }],
+          d1_databases: [{ binding: "DB", database_name: "espinosa-ffl-clubhouse", database_id: CLUBHOUSE_D1_DATABASE_ID }],
           routes: [{ pattern: "espinosaFFL.sme327.com", custom_domain: true }],
         },
       }),
