@@ -8,7 +8,7 @@ const ROOMS = [
   { key: "locker", icon: ["🎽", "👥", "🧦"], title: "Locker Room", href: "/managers", desc: "Manager profiles, career records, and personal bests.", color: "var(--room-locker)", gradient: "linear-gradient(160deg,#EEF7EF 0%,#80CC80 100%)" },
   { key: "rivalry", icon: ["😤", "🥊", "😈"], title: "Rivalry Arena", href: "/rivalries", desc: "Every grudge. Every bragging right. Head-to-head history.", color: "var(--room-rivalry)", gradient: "linear-gradient(160deg,#FEF0F8 0%,#F080C0 100%)" },
   { key: "weekly", icon: ["🏈", "🔮", "⭐"], title: "Weekly Fun", href: "/weekly", desc: "Make family picks, choose an MVP, and celebrate the week.", color: "var(--action-green)", gradient: "linear-gradient(160deg,#B9C6CA 0%,#91B39A 100%)" },
-  { key: "achievement", icon: ["🎖️", "🎯", "🏅"], title: "Achievement Wall", href: null, desc: "Badges, stickers, and collectible achievements. Coming soon!", color: "var(--room-achievement)", gradient: "linear-gradient(160deg,#F0EEF8 0%,#C8B8E8 100%)" },
+  { key: "achievement", icon: ["🎖️", "🎯", "🏅"], title: "Achievement Wall", href: "/achievements", desc: "See what everyone has earned—and what they can unlock next.", color: "var(--room-achievement)", gradient: "linear-gradient(160deg,#F0EEF8 0%,#C8B8E8 100%)" },
   { key: "draft", icon: ["📝", "📋", "🎲"], title: "Draft Room", href: "/draft", desc: "Meet the draft class and get ready to build your 2026 team.", color: "var(--room-draft)", gradient: "linear-gradient(160deg,#F5F0FF 0%,#B8A0E0 100%)" },
 ] as const;
 
@@ -66,9 +66,7 @@ export default function Overview() {
                 {room.href ? <span className="hq-explore-cta" style={{ background: room.color }}>Enter →</span> : <span className="hq-explore-soon">Coming Soon</span>}
               </div>
             </>;
-            return room.href
-              ? <Link key={room.key} href={room.href} className="hq-explore-card">{card}</Link>
-              : <div key={room.key} className="hq-explore-card hq-explore-card-soon" aria-disabled="true">{card}</div>;
+            return <Link key={room.key} href={room.href} className="hq-explore-card">{card}</Link>;
           })}
         </div>
       </section>

@@ -8,6 +8,7 @@ const rooms = [
   ["/rivalries", "🥊 Rivalry Arena"],
   ["/draft", "🗂️ Draft Room"],
   ["/weekly", "🔮 Weekly Fun"],
+  ["/achievements", "🎯 Achievements"],
 ] as const;
 
 export function SiteHeader() {
@@ -16,7 +17,6 @@ export function SiteHeader() {
       <Link className="hq-nav-brand" href="/">🏈 Espinosa FFL</Link>
       <div className="hq-nav-tabs">
         {rooms.map(([href, label]) => <Link key={href} href={href} className="hq-nav-tab">{label}</Link>)}
-        <span className="hq-nav-tab hq-nav-soon" aria-disabled="true">🎯 Achievements</span>
       </div>
     </nav>
   </header>;

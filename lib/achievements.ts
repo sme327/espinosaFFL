@@ -1,4 +1,5 @@
 import achievementData from "@/data/config/achievements.json";
+import { getChampions, matchups, type Manager } from "@/lib/league";
 
 export type AchievementCategory = "league" | "draft" | "participation" | "family_spirit" | "memory";
 export type AwardMethod = "automatic" | "commissioner";
@@ -54,4 +55,26 @@ export function automaticAchievements(): AchievementDefinition[] {
 
 export function commissionerAchievements(): AchievementDefinition[] {
   return achievements.filter((achievement) => achievement.awardMethod === "commissioner");
+}
+
+export type HistoricalAchievement = AchievementDefinition & { count: number; seasons: number[] };
+
+export function historicalAchievementsFor(manager: Manager): HistoricalAchievement[] {
+  const earned: HistoricalAchievement[] = [];
+  const titles = getChampions().filter((champion) => champion.championManager?.id === manager.id).map((champion) => champion.season);
+  if (titles.length) earned.push({ ...achievements.find((item) => item.id === "league_champion")!, count: titles.length, seasons: titles });
+
+  if (manager.teamName) {
+    const managerGames = matchups.filter((game) => game.teamName === manager.teamName);
+    const highScoreWeeks = managerGames.filter((game) => {
+      const weekScores = matchups.filter((row) => row.season === game.season && row.week === game.week).map((row) => row.teamScore);
+      return game.teamScore === Math.max(...weekScores);
+    });
+    if (highScoreWeeks.length) earned.push({
+      ...achievements.find((item) => item.id === "weekly_high_score")!,
+      count: highScoreWeeks.length,
+      seasons: [...new Set(highScoreWeeks.map((game) => game.season))].sort(),
+    });
+  }
+  return earned;
 }

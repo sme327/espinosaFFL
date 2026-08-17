@@ -21,7 +21,19 @@ test("home renders the clubhouse hero and links to every live room", async () =>
   assert.match(html, /href="\/seasons"/);
   assert.match(html, /href="\/managers"/);
   assert.match(html, /href="\/rivalries"/);
-  assert.match(html, /Coming Soon/);
+  assert.match(html, /href="\/achievements"/);
+});
+
+test("achievement wall gives all five family members a locker and honest earned badges", async () => {
+  const { response, html: rawHtml } = await render("/achievements");
+  const html = withoutRenderComments(rawHtml);
+  assert.equal(response.status, 200);
+  assert.match(html, /Achievement Wall/);
+  for (const name of ["Shawn", "Jennifer", "Daphne", "Elliot", "Wyatt"]) assert.match(html, new RegExp(name));
+  assert.match(html, /On the Wall/);
+  assert.match(html, /Still to Unlock/);
+  assert.match(html, /League Champion/);
+  assert.match(html, /Future Manager/);
 });
 
 test("home features the reigning 2025 champion and the full trophy shelf", async () => {

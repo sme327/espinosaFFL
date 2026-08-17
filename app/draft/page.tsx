@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ManagerIdentity } from "@/components/manager-identity";
 import { PlayerIdentity, type DraftPlayerIdentity } from "@/components/player-identity";
+import { TeamLogo } from "@/components/team-logo";
 import playerPool from "@/data/draft/players-2026.json";
 import { familyDraftForSeason } from "@/lib/family-draft";
 import { managerById } from "@/lib/league";
@@ -30,10 +31,12 @@ export default function DraftRoomPage() {
       <div className="draft-family-row">
         {activeManagers.map((manager) => <article className="draft-manager-seat" key={manager.id} style={{ borderColor: manager.color }}>
           <ManagerIdentity manager={manager} size="large" showName showTeam />
+          <TeamLogo manager={manager} size="medium" />
           <span>Ready to draft</span>
         </article>)}
         {reservedManagers.map((manager) => <article className="draft-manager-seat draft-manager-seat-future" key={manager.id}>
           <ManagerIdentity manager={manager} size="large" showName futureLabel />
+          <TeamLogo manager={manager} size="medium" />
           <span>Seat saved for a future season</span>
         </article>)}
       </div>
