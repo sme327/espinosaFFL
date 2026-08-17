@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS weekly_matchups (id TEXT PRIMARY KEY, season INTEGER NOT NULL, week INTEGER NOT NULL CHECK (week > 0), manager_a_id TEXT NOT NULL, manager_b_id TEXT NOT NULL, locks_at TEXT NOT NULL, featured INTEGER NOT NULL DEFAULT 0 CHECK (featured IN (0, 1)), created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, CHECK (manager_a_id != manager_b_id), UNIQUE(season, week, manager_a_id, manager_b_id));
+CREATE INDEX IF NOT EXISTS idx_weekly_matchups_season_week ON weekly_matchups(season, week, locks_at);
+CREATE TABLE IF NOT EXISTS weekly_predictions (id TEXT PRIMARY KEY, matchup_id TEXT NOT NULL REFERENCES weekly_matchups(id), participant_manager_id TEXT NOT NULL, predicted_manager_id TEXT NOT NULL, confidence TEXT NOT NULL CHECK (confidence IN ('unsure', 'confident', 'super')), created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, UNIQUE(matchup_id, participant_manager_id));
+CREATE INDEX IF NOT EXISTS idx_weekly_predictions_participant ON weekly_predictions(participant_manager_id, matchup_id);
+PRAGMA optimize;

@@ -1,0 +1,16 @@
+{
+  "familySize": 5,
+  "drafts": [
+    {
+      "season": 2026,
+      "status": "planning",
+      "activeManagerIds": ["shawn", "jennifer", "daphne", "elliot"],
+      "reservedManagerIds": ["wyatt"],
+      "commissionerManagerId": "shawn",
+      "draftOrder": [],
+      "orderType": "snake",
+      "rounds": 7,
+      "rosterSlots": ["QB", "RB", "WR", "TE", "K", "BN", "BN"]
+    }
+  ]
+}

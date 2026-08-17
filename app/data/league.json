@@ -1,0 +1,2763 @@
+{
+  "generatedFor": "2026-08-17",
+  "leagueName": "Espinosa FFL",
+  "leagueSubtitle": "Family Fantasy Football",
+  "founded": 2023,
+  "currentSeason": 2026,
+  "familySize": 5,
+  "managers": [
+    {
+      "id": "shawn",
+      "name": "Shawn",
+      "teamName": "dad will win",
+      "color": "#1F5E3B",
+      "lightColor": "#E3F0E8",
+      "emoji": "🏈",
+      "order": 1,
+      "active": true,
+      "clubhouseMember": true,
+      "photoPath": null,
+      "teamLogoPath": null,
+      "soundPath": null,
+      "celebration": null,
+      "interfaceMode": null
+    },
+    {
+      "id": "jennifer",
+      "name": "Jennifer",
+      "teamName": "Marvelous Mamma",
+      "color": "#002244",
+      "lightColor": "#E3E8F0",
+      "emoji": "⭐",
+      "order": 2,
+      "active": true,
+      "clubhouseMember": true,
+      "photoPath": null,
+      "teamLogoPath": null,
+      "soundPath": null,
+      "celebration": null,
+      "interfaceMode": null
+    },
+    {
+      "id": "daphne",
+      "name": "Daphne",
+      "teamName": "Daphne's Magic",
+      "color": "#0A5EA8",
+      "lightColor": "#E3EDF8",
+      "emoji": "✨",
+      "order": 3,
+      "active": true,
+      "clubhouseMember": true,
+      "photoPath": null,
+      "teamLogoPath": null,
+      "soundPath": null,
+      "celebration": null,
+      "interfaceMode": null
+    },
+    {
+      "id": "elliot",
+      "name": "Elliot",
+      "teamName": "Pinkie pink 🏈",
+      "color": "#E86AA6",
+      "lightColor": "#FDE8F3",
+      "emoji": "🩷",
+      "order": 4,
+      "active": true,
+      "clubhouseMember": true,
+      "photoPath": null,
+      "teamLogoPath": null,
+      "soundPath": null,
+      "celebration": null,
+      "interfaceMode": null
+    },
+    {
+      "id": "wyatt",
+      "name": "Wyatt",
+      "teamName": null,
+      "color": "#F28C28",
+      "lightColor": "#FEF0E3",
+      "emoji": "🌟",
+      "order": 5,
+      "active": false,
+      "clubhouseMember": true,
+      "photoPath": null,
+      "teamLogoPath": null,
+      "soundPath": null,
+      "celebration": null,
+      "interfaceMode": null
+    }
+  ],
+  "seasons": [
+    {
+      "season": 2023,
+      "tagline": "Dad said he'd win. He wasn't wrong.",
+      "highlights": [
+        "Shawn went 12–3, the best regular season record at the time.",
+        "Daphne made it to the championship game as a first-year player.",
+        "Jennifer upset Dad in Week 2 — a sign of things to come."
+      ]
+    },
+    {
+      "season": 2024,
+      "tagline": "Dead last in August. Champion in January.",
+      "highlights": [
+        "Jennifer finished 5–10 in the regular season (last place among playoff seeds) — then won it all.",
+        "The championship margin: 0.2 points. The closest finish in league history.",
+        "Shawn came within a whisper of back-to-back titles."
+      ]
+    },
+    {
+      "season": 2025,
+      "tagline": "The 3-seed who silenced everyone.",
+      "highlights": [
+        "Daphne went 13–2 — the best regular season record in league history.",
+        "Jennifer went 2–13 in the regular season and still reached the championship.",
+        "Elliot entered the playoffs as the 3-seed and never looked back."
+      ]
+    }
+  ],
+  "recentEvents": [
+    {
+      "icon": "🏆",
+      "text": "Elliot wins the 2025 Championship (118.4 – 80.8 over Jennifer)"
+    },
+    {
+      "icon": "😤",
+      "text": "Daphne goes 13–2 in the regular season — then loses to Jennifer in the playoffs"
+    },
+    {
+      "icon": "⚡",
+      "text": "Jennifer goes 2–13 and still reaches the championship game"
+    },
+    {
+      "icon": "📅",
+      "text": "2026 season coming soon — Wyatt is watching closely"
+    }
+  ],
+  "matchups": [
+    {
+      "season": 2023,
+      "week": 1,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 91.3,
+      "opponentScore": 71.9
+    },
+    {
+      "season": 2023,
+      "week": 1,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 71.9,
+      "opponentScore": 91.3
+    },
+    {
+      "season": 2023,
+      "week": 1,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 63.3,
+      "opponentScore": 59.7
+    },
+    {
+      "season": 2023,
+      "week": 1,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 59.7,
+      "opponentScore": 63.3
+    },
+    {
+      "season": 2023,
+      "week": 2,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 102.7,
+      "opponentScore": 103.5
+    },
+    {
+      "season": 2023,
+      "week": 2,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 103.5,
+      "opponentScore": 102.7
+    },
+    {
+      "season": 2023,
+      "week": 2,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 94.3,
+      "opponentScore": 119.9
+    },
+    {
+      "season": 2023,
+      "week": 2,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 119.9,
+      "opponentScore": 94.3
+    },
+    {
+      "season": 2023,
+      "week": 3,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 155.8,
+      "opponentScore": 119.5
+    },
+    {
+      "season": 2023,
+      "week": 3,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 119.5,
+      "opponentScore": 155.8
+    },
+    {
+      "season": 2023,
+      "week": 3,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 137.3,
+      "opponentScore": 76.2
+    },
+    {
+      "season": 2023,
+      "week": 3,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 76.2,
+      "opponentScore": 137.3
+    },
+    {
+      "season": 2023,
+      "week": 4,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 85.6,
+      "opponentScore": 77.5
+    },
+    {
+      "season": 2023,
+      "week": 4,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 77.5,
+      "opponentScore": 85.6
+    },
+    {
+      "season": 2023,
+      "week": 4,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 69.2,
+      "opponentScore": 63.7
+    },
+    {
+      "season": 2023,
+      "week": 4,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 63.7,
+      "opponentScore": 69.2
+    },
+    {
+      "season": 2023,
+      "week": 5,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 108.8,
+      "opponentScore": 72.4
+    },
+    {
+      "season": 2023,
+      "week": 5,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 72.4,
+      "opponentScore": 108.8
+    },
+    {
+      "season": 2023,
+      "week": 5,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 96.2,
+      "opponentScore": 126.5
+    },
+    {
+      "season": 2023,
+      "week": 5,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 126.5,
+      "opponentScore": 96.2
+    },
+    {
+      "season": 2023,
+      "week": 6,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 112.8,
+      "opponentScore": 103.5
+    },
+    {
+      "season": 2023,
+      "week": 6,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 103.5,
+      "opponentScore": 112.8
+    },
+    {
+      "season": 2023,
+      "week": 6,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 93.3,
+      "opponentScore": 58.8
+    },
+    {
+      "season": 2023,
+      "week": 6,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 58.8,
+      "opponentScore": 93.3
+    },
+    {
+      "season": 2023,
+      "week": 7,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 124.5,
+      "opponentScore": 108.3
+    },
+    {
+      "season": 2023,
+      "week": 7,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 108.3,
+      "opponentScore": 124.5
+    },
+    {
+      "season": 2023,
+      "week": 7,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 81.2,
+      "opponentScore": 99.2
+    },
+    {
+      "season": 2023,
+      "week": 7,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 99.2,
+      "opponentScore": 81.2
+    },
+    {
+      "season": 2023,
+      "week": 8,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 102.1,
+      "opponentScore": 77.2
+    },
+    {
+      "season": 2023,
+      "week": 8,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 77.2,
+      "opponentScore": 102.1
+    },
+    {
+      "season": 2023,
+      "week": 8,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 125.5,
+      "opponentScore": 99.8
+    },
+    {
+      "season": 2023,
+      "week": 8,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 99.8,
+      "opponentScore": 125.5
+    },
+    {
+      "season": 2023,
+      "week": 9,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 113.4,
+      "opponentScore": 85.1
+    },
+    {
+      "season": 2023,
+      "week": 9,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 85.1,
+      "opponentScore": 113.4
+    },
+    {
+      "season": 2023,
+      "week": 9,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 68.9,
+      "opponentScore": 68.2
+    },
+    {
+      "season": 2023,
+      "week": 9,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 68.2,
+      "opponentScore": 68.9
+    },
+    {
+      "season": 2023,
+      "week": 10,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 148.9,
+      "opponentScore": 118.2
+    },
+    {
+      "season": 2023,
+      "week": 10,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 118.2,
+      "opponentScore": 148.9
+    },
+    {
+      "season": 2023,
+      "week": 10,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 101.4,
+      "opponentScore": 111.9
+    },
+    {
+      "season": 2023,
+      "week": 10,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 111.9,
+      "opponentScore": 101.4
+    },
+    {
+      "season": 2023,
+      "week": 11,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 114.5,
+      "opponentScore": 123.5
+    },
+    {
+      "season": 2023,
+      "week": 11,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 123.5,
+      "opponentScore": 114.5
+    },
+    {
+      "season": 2023,
+      "week": 11,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 123.2,
+      "opponentScore": 81.9
+    },
+    {
+      "season": 2023,
+      "week": 11,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 81.9,
+      "opponentScore": 123.2
+    },
+    {
+      "season": 2023,
+      "week": 12,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 113.1,
+      "opponentScore": 76.9
+    },
+    {
+      "season": 2023,
+      "week": 12,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 76.9,
+      "opponentScore": 113.1
+    },
+    {
+      "season": 2023,
+      "week": 12,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 71.6,
+      "opponentScore": 123.0
+    },
+    {
+      "season": 2023,
+      "week": 12,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 123.0,
+      "opponentScore": 71.6
+    },
+    {
+      "season": 2023,
+      "week": 13,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 134.7,
+      "opponentScore": 130.4
+    },
+    {
+      "season": 2023,
+      "week": 13,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 130.4,
+      "opponentScore": 134.7
+    },
+    {
+      "season": 2023,
+      "week": 13,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 117.0,
+      "opponentScore": 99.8
+    },
+    {
+      "season": 2023,
+      "week": 13,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 99.8,
+      "opponentScore": 117.0
+    },
+    {
+      "season": 2023,
+      "week": 14,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 111.5,
+      "opponentScore": 99.3
+    },
+    {
+      "season": 2023,
+      "week": 14,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 99.3,
+      "opponentScore": 111.5
+    },
+    {
+      "season": 2023,
+      "week": 14,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 70.8,
+      "opponentScore": 96.3
+    },
+    {
+      "season": 2023,
+      "week": 14,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 96.3,
+      "opponentScore": 70.8
+    },
+    {
+      "season": 2023,
+      "week": 15,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 80.8,
+      "opponentScore": 90.0
+    },
+    {
+      "season": 2023,
+      "week": 15,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 90.0,
+      "opponentScore": 80.8
+    },
+    {
+      "season": 2023,
+      "week": 15,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 110.4,
+      "opponentScore": 129.8
+    },
+    {
+      "season": 2023,
+      "week": 15,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 129.8,
+      "opponentScore": 110.4
+    },
+    {
+      "season": 2023,
+      "week": 16,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 116.3,
+      "opponentScore": 113.3
+    },
+    {
+      "season": 2023,
+      "week": 16,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 113.3,
+      "opponentScore": 116.3
+    },
+    {
+      "season": 2023,
+      "week": 16,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 118.0,
+      "opponentScore": 95.4
+    },
+    {
+      "season": 2023,
+      "week": 16,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 95.4,
+      "opponentScore": 118.0
+    },
+    {
+      "season": 2023,
+      "week": 17,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 136.5,
+      "opponentScore": 114.8
+    },
+    {
+      "season": 2023,
+      "week": 17,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 114.8,
+      "opponentScore": 136.5
+    },
+    {
+      "season": 2023,
+      "week": 17,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 123.7,
+      "opponentScore": 83.6
+    },
+    {
+      "season": 2023,
+      "week": 17,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 83.6,
+      "opponentScore": 123.7
+    },
+    {
+      "season": 2024,
+      "week": 1,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 79.0,
+      "opponentScore": 61.9
+    },
+    {
+      "season": 2024,
+      "week": 1,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 61.9,
+      "opponentScore": 79.0
+    },
+    {
+      "season": 2024,
+      "week": 1,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 92.6,
+      "opponentScore": 99.4
+    },
+    {
+      "season": 2024,
+      "week": 1,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 99.4,
+      "opponentScore": 92.6
+    },
+    {
+      "season": 2024,
+      "week": 2,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 108.5,
+      "opponentScore": 70.3
+    },
+    {
+      "season": 2024,
+      "week": 2,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 70.3,
+      "opponentScore": 108.5
+    },
+    {
+      "season": 2024,
+      "week": 2,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 113.4,
+      "opponentScore": 108.7
+    },
+    {
+      "season": 2024,
+      "week": 2,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 108.7,
+      "opponentScore": 113.4
+    },
+    {
+      "season": 2024,
+      "week": 3,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 116.1,
+      "opponentScore": 129.8
+    },
+    {
+      "season": 2024,
+      "week": 3,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 129.8,
+      "opponentScore": 116.1
+    },
+    {
+      "season": 2024,
+      "week": 3,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 86.2,
+      "opponentScore": 94.5
+    },
+    {
+      "season": 2024,
+      "week": 3,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 94.5,
+      "opponentScore": 86.2
+    },
+    {
+      "season": 2024,
+      "week": 4,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 106.0,
+      "opponentScore": 88.6
+    },
+    {
+      "season": 2024,
+      "week": 4,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 88.6,
+      "opponentScore": 106.0
+    },
+    {
+      "season": 2024,
+      "week": 4,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 74.9,
+      "opponentScore": 113.8
+    },
+    {
+      "season": 2024,
+      "week": 4,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 113.8,
+      "opponentScore": 74.9
+    },
+    {
+      "season": 2024,
+      "week": 5,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 101.8,
+      "opponentScore": 90.2
+    },
+    {
+      "season": 2024,
+      "week": 5,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 90.2,
+      "opponentScore": 101.8
+    },
+    {
+      "season": 2024,
+      "week": 5,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 120.1,
+      "opponentScore": 104.8
+    },
+    {
+      "season": 2024,
+      "week": 5,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 104.8,
+      "opponentScore": 120.1
+    },
+    {
+      "season": 2024,
+      "week": 6,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 120.0,
+      "opponentScore": 88.7
+    },
+    {
+      "season": 2024,
+      "week": 6,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 88.7,
+      "opponentScore": 120.0
+    },
+    {
+      "season": 2024,
+      "week": 6,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 67.9,
+      "opponentScore": 76.3
+    },
+    {
+      "season": 2024,
+      "week": 6,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 76.3,
+      "opponentScore": 67.9
+    },
+    {
+      "season": 2024,
+      "week": 7,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 92.9,
+      "opponentScore": 125.7
+    },
+    {
+      "season": 2024,
+      "week": 7,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 125.7,
+      "opponentScore": 92.9
+    },
+    {
+      "season": 2024,
+      "week": 7,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 118.2,
+      "opponentScore": 106.5
+    },
+    {
+      "season": 2024,
+      "week": 7,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 106.5,
+      "opponentScore": 118.2
+    },
+    {
+      "season": 2024,
+      "week": 8,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 98.3,
+      "opponentScore": 117.2
+    },
+    {
+      "season": 2024,
+      "week": 8,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 117.2,
+      "opponentScore": 98.3
+    },
+    {
+      "season": 2024,
+      "week": 8,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 139.8,
+      "opponentScore": 91.4
+    },
+    {
+      "season": 2024,
+      "week": 8,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 91.4,
+      "opponentScore": 139.8
+    },
+    {
+      "season": 2024,
+      "week": 9,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 117.4,
+      "opponentScore": 138.6
+    },
+    {
+      "season": 2024,
+      "week": 9,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 138.6,
+      "opponentScore": 117.4
+    },
+    {
+      "season": 2024,
+      "week": 9,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 137.1,
+      "opponentScore": 118.5
+    },
+    {
+      "season": 2024,
+      "week": 9,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 118.5,
+      "opponentScore": 137.1
+    },
+    {
+      "season": 2024,
+      "week": 10,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 72.2,
+      "opponentScore": 106.5
+    },
+    {
+      "season": 2024,
+      "week": 10,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 106.5,
+      "opponentScore": 72.2
+    },
+    {
+      "season": 2024,
+      "week": 10,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 80.7,
+      "opponentScore": 126.4
+    },
+    {
+      "season": 2024,
+      "week": 10,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 126.4,
+      "opponentScore": 80.7
+    },
+    {
+      "season": 2024,
+      "week": 11,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 122.0,
+      "opponentScore": 75.6
+    },
+    {
+      "season": 2024,
+      "week": 11,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 75.6,
+      "opponentScore": 122.0
+    },
+    {
+      "season": 2024,
+      "week": 11,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 109.0,
+      "opponentScore": 76.7
+    },
+    {
+      "season": 2024,
+      "week": 11,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 76.7,
+      "opponentScore": 109.0
+    },
+    {
+      "season": 2024,
+      "week": 12,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 101.6,
+      "opponentScore": 101.2
+    },
+    {
+      "season": 2024,
+      "week": 12,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 101.2,
+      "opponentScore": 101.6
+    },
+    {
+      "season": 2024,
+      "week": 12,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 92.5,
+      "opponentScore": 115.2
+    },
+    {
+      "season": 2024,
+      "week": 12,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 115.2,
+      "opponentScore": 92.5
+    },
+    {
+      "season": 2024,
+      "week": 13,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 96.9,
+      "opponentScore": 74.9
+    },
+    {
+      "season": 2024,
+      "week": 13,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 74.9,
+      "opponentScore": 96.9
+    },
+    {
+      "season": 2024,
+      "week": 13,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 103.8,
+      "opponentScore": 97.9
+    },
+    {
+      "season": 2024,
+      "week": 13,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 97.9,
+      "opponentScore": 103.8
+    },
+    {
+      "season": 2024,
+      "week": 14,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 160.6,
+      "opponentScore": 131.9
+    },
+    {
+      "season": 2024,
+      "week": 14,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 131.9,
+      "opponentScore": 160.6
+    },
+    {
+      "season": 2024,
+      "week": 14,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 123.5,
+      "opponentScore": 112.6
+    },
+    {
+      "season": 2024,
+      "week": 14,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 112.6,
+      "opponentScore": 123.5
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 117.6,
+      "opponentScore": 113.2
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 113.2,
+      "opponentScore": 117.6
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 130.5,
+      "opponentScore": 91.5
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 91.5,
+      "opponentScore": 130.5
+    },
+    {
+      "season": 2024,
+      "week": 16,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 123.8,
+      "opponentScore": 116.4
+    },
+    {
+      "season": 2024,
+      "week": 16,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 116.4,
+      "opponentScore": 123.8
+    },
+    {
+      "season": 2024,
+      "week": 16,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 126.7,
+      "opponentScore": 136.3
+    },
+    {
+      "season": 2024,
+      "week": 16,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 136.3,
+      "opponentScore": 126.7
+    },
+    {
+      "season": 2024,
+      "week": 17,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 122.6,
+      "opponentScore": 122.8
+    },
+    {
+      "season": 2024,
+      "week": 17,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 122.8,
+      "opponentScore": 122.6
+    },
+    {
+      "season": 2024,
+      "week": 17,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 94.6,
+      "opponentScore": 97.8
+    },
+    {
+      "season": 2024,
+      "week": 17,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 97.8,
+      "opponentScore": 94.6
+    },
+    {
+      "season": 2025,
+      "week": 1,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 110.4,
+      "opponentScore": 103.2
+    },
+    {
+      "season": 2025,
+      "week": 1,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 103.2,
+      "opponentScore": 110.4
+    },
+    {
+      "season": 2025,
+      "week": 1,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 91.9,
+      "opponentScore": 78.8
+    },
+    {
+      "season": 2025,
+      "week": 1,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 78.8,
+      "opponentScore": 91.9
+    },
+    {
+      "season": 2025,
+      "week": 2,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 107.7,
+      "opponentScore": 111.7
+    },
+    {
+      "season": 2025,
+      "week": 2,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 111.7,
+      "opponentScore": 107.7
+    },
+    {
+      "season": 2025,
+      "week": 2,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 114.9,
+      "opponentScore": 102.6
+    },
+    {
+      "season": 2025,
+      "week": 2,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 102.6,
+      "opponentScore": 114.9
+    },
+    {
+      "season": 2025,
+      "week": 3,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 80.2,
+      "opponentScore": 114.1
+    },
+    {
+      "season": 2025,
+      "week": 3,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 114.1,
+      "opponentScore": 80.2
+    },
+    {
+      "season": 2025,
+      "week": 3,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 75.5,
+      "opponentScore": 102.3
+    },
+    {
+      "season": 2025,
+      "week": 3,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 102.3,
+      "opponentScore": 75.5
+    },
+    {
+      "season": 2025,
+      "week": 4,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 114.4,
+      "opponentScore": 128.9
+    },
+    {
+      "season": 2025,
+      "week": 4,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 128.9,
+      "opponentScore": 114.4
+    },
+    {
+      "season": 2025,
+      "week": 4,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 106.8,
+      "opponentScore": 117.5
+    },
+    {
+      "season": 2025,
+      "week": 4,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 117.5,
+      "opponentScore": 106.8
+    },
+    {
+      "season": 2025,
+      "week": 5,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 148.3,
+      "opponentScore": 110.9
+    },
+    {
+      "season": 2025,
+      "week": 5,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 110.9,
+      "opponentScore": 148.3
+    },
+    {
+      "season": 2025,
+      "week": 5,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 141.1,
+      "opponentScore": 109.1
+    },
+    {
+      "season": 2025,
+      "week": 5,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 109.1,
+      "opponentScore": 141.1
+    },
+    {
+      "season": 2025,
+      "week": 6,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 121.7,
+      "opponentScore": 126.4
+    },
+    {
+      "season": 2025,
+      "week": 6,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 126.4,
+      "opponentScore": 121.7
+    },
+    {
+      "season": 2025,
+      "week": 6,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 117.6,
+      "opponentScore": 145.8
+    },
+    {
+      "season": 2025,
+      "week": 6,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 145.8,
+      "opponentScore": 117.6
+    },
+    {
+      "season": 2025,
+      "week": 7,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 81.8,
+      "opponentScore": 102.7
+    },
+    {
+      "season": 2025,
+      "week": 7,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 102.7,
+      "opponentScore": 81.8
+    },
+    {
+      "season": 2025,
+      "week": 7,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 169.8,
+      "opponentScore": 163.6
+    },
+    {
+      "season": 2025,
+      "week": 7,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 163.6,
+      "opponentScore": 169.8
+    },
+    {
+      "season": 2025,
+      "week": 8,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 132.8,
+      "opponentScore": 106.6
+    },
+    {
+      "season": 2025,
+      "week": 8,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 106.6,
+      "opponentScore": 132.8
+    },
+    {
+      "season": 2025,
+      "week": 8,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 118.4,
+      "opponentScore": 92.0
+    },
+    {
+      "season": 2025,
+      "week": 8,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 92.0,
+      "opponentScore": 118.4
+    },
+    {
+      "season": 2025,
+      "week": 9,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 82.6,
+      "opponentScore": 124.8
+    },
+    {
+      "season": 2025,
+      "week": 9,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 124.8,
+      "opponentScore": 82.6
+    },
+    {
+      "season": 2025,
+      "week": 9,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 50.1,
+      "opponentScore": 117.7
+    },
+    {
+      "season": 2025,
+      "week": 9,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 117.7,
+      "opponentScore": 50.1
+    },
+    {
+      "season": 2025,
+      "week": 10,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 95.2,
+      "opponentScore": 50.8
+    },
+    {
+      "season": 2025,
+      "week": 10,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 50.8,
+      "opponentScore": 95.2
+    },
+    {
+      "season": 2025,
+      "week": 10,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 107.2,
+      "opponentScore": 85.8
+    },
+    {
+      "season": 2025,
+      "week": 10,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 85.8,
+      "opponentScore": 107.2
+    },
+    {
+      "season": 2025,
+      "week": 11,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 124.6,
+      "opponentScore": 85.3
+    },
+    {
+      "season": 2025,
+      "week": 11,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 85.3,
+      "opponentScore": 124.6
+    },
+    {
+      "season": 2025,
+      "week": 11,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 112.6,
+      "opponentScore": 85.2
+    },
+    {
+      "season": 2025,
+      "week": 11,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 85.2,
+      "opponentScore": 112.6
+    },
+    {
+      "season": 2025,
+      "week": 12,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 107.8,
+      "opponentScore": 128.8
+    },
+    {
+      "season": 2025,
+      "week": 12,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 128.8,
+      "opponentScore": 107.8
+    },
+    {
+      "season": 2025,
+      "week": 12,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 93.7,
+      "opponentScore": 153.5
+    },
+    {
+      "season": 2025,
+      "week": 12,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 153.5,
+      "opponentScore": 93.7
+    },
+    {
+      "season": 2025,
+      "week": 13,
+      "teamName": "dad will win",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 98.5,
+      "opponentScore": 94.2
+    },
+    {
+      "season": 2025,
+      "week": 13,
+      "teamName": "Marvelous Mamma",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 94.2,
+      "opponentScore": 98.5
+    },
+    {
+      "season": 2025,
+      "week": 13,
+      "teamName": "Daphne's Magic",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 108.0,
+      "opponentScore": 97.8
+    },
+    {
+      "season": 2025,
+      "week": 13,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 97.8,
+      "opponentScore": 108.0
+    },
+    {
+      "season": 2025,
+      "week": 14,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Win",
+      "teamScore": 125.8,
+      "opponentScore": 89.8
+    },
+    {
+      "season": 2025,
+      "week": 14,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 89.8,
+      "opponentScore": 125.8
+    },
+    {
+      "season": 2025,
+      "week": 14,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 84.1,
+      "opponentScore": 79.9
+    },
+    {
+      "season": 2025,
+      "week": 14,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 79.9,
+      "opponentScore": 84.1
+    },
+    {
+      "season": 2025,
+      "week": 15,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 134.3,
+      "opponentScore": 112.8
+    },
+    {
+      "season": 2025,
+      "week": 15,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Loss",
+      "teamScore": 112.8,
+      "opponentScore": 134.3
+    },
+    {
+      "season": 2025,
+      "week": 15,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 62.0,
+      "opponentScore": 163.7
+    },
+    {
+      "season": 2025,
+      "week": 15,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 163.7,
+      "opponentScore": 62.0
+    },
+    {
+      "season": 2025,
+      "week": 16,
+      "teamName": "dad will win",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 91.3,
+      "opponentScore": 127.7
+    },
+    {
+      "season": 2025,
+      "week": 16,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 127.7,
+      "opponentScore": 91.3
+    },
+    {
+      "season": 2025,
+      "week": 16,
+      "teamName": "Daphne's Magic",
+      "opponent": "Marvelous Mamma",
+      "result": "Loss",
+      "teamScore": 102.8,
+      "opponentScore": 104.2
+    },
+    {
+      "season": 2025,
+      "week": 16,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Daphne's Magic",
+      "result": "Win",
+      "teamScore": 104.2,
+      "opponentScore": 102.8
+    },
+    {
+      "season": 2025,
+      "week": 17,
+      "teamName": "Marvelous Mamma",
+      "opponent": "Pinkie pink 🏈",
+      "result": "Loss",
+      "teamScore": 80.8,
+      "opponentScore": 118.4
+    },
+    {
+      "season": 2025,
+      "week": 17,
+      "teamName": "Pinkie pink 🏈",
+      "opponent": "Marvelous Mamma",
+      "result": "Win",
+      "teamScore": 118.4,
+      "opponentScore": 80.8
+    },
+    {
+      "season": 2025,
+      "week": 17,
+      "teamName": "dad will win",
+      "opponent": "Daphne's Magic",
+      "result": "Loss",
+      "teamScore": 74.7,
+      "opponentScore": 87.5
+    },
+    {
+      "season": 2025,
+      "week": 17,
+      "teamName": "Daphne's Magic",
+      "opponent": "dad will win",
+      "result": "Win",
+      "teamScore": 87.5,
+      "opponentScore": 74.7
+    }
+  ],
+  "playoffs": [
+    {
+      "season": 2023,
+      "week": 16,
+      "round": 2,
+      "gameType": "semifinal",
+      "seed1": 1,
+      "team1": "dad will win",
+      "score1": 116.3,
+      "seed2": 4,
+      "team2": "Marvelous Mamma",
+      "score2": 113.3
+    },
+    {
+      "season": 2023,
+      "week": 16,
+      "round": 2,
+      "gameType": "semifinal",
+      "seed1": 2,
+      "team1": "Pinkie pink 🏈",
+      "score1": 95.4,
+      "seed2": 3,
+      "team2": "Daphne's Magic",
+      "score2": 118.0
+    },
+    {
+      "season": 2023,
+      "week": 17,
+      "round": 3,
+      "gameType": "final",
+      "seed1": 1,
+      "team1": "dad will win",
+      "score1": 136.5,
+      "seed2": 3,
+      "team2": "Daphne's Magic",
+      "score2": 114.8
+    },
+    {
+      "season": 2023,
+      "week": 17,
+      "round": 3,
+      "gameType": "3rd_place",
+      "seed1": 2,
+      "team1": "Pinkie pink 🏈",
+      "score1": 123.7,
+      "seed2": 4,
+      "team2": "Marvelous Mamma",
+      "score2": 83.6
+    },
+    {
+      "season": 2024,
+      "week": 16,
+      "round": 2,
+      "gameType": "semifinal",
+      "seed1": 1,
+      "team1": "Pinkie pink 🏈",
+      "score1": 126.7,
+      "seed2": 4,
+      "team2": "Marvelous Mamma",
+      "score2": 136.3
+    },
+    {
+      "season": 2024,
+      "week": 16,
+      "round": 2,
+      "gameType": "semifinal",
+      "seed1": 2,
+      "team1": "dad will win",
+      "score1": 123.8,
+      "seed2": 3,
+      "team2": "Daphne's Magic",
+      "score2": 116.4
+    },
+    {
+      "season": 2024,
+      "week": 17,
+      "round": 3,
+      "gameType": "final",
+      "seed1": 2,
+      "team1": "dad will win",
+      "score1": 122.6,
+      "seed2": 4,
+      "team2": "Marvelous Mamma",
+      "score2": 122.8
+    },
+    {
+      "season": 2024,
+      "week": 17,
+      "round": 3,
+      "gameType": "3rd_place",
+      "seed1": 1,
+      "team1": "Pinkie pink 🏈",
+      "score1": 97.8,
+      "seed2": 3,
+      "team2": "Daphne's Magic",
+      "score2": 94.6
+    },
+    {
+      "season": 2025,
+      "week": 16,
+      "round": 2,
+      "gameType": "semifinal",
+      "seed1": 1,
+      "team1": "Daphne's Magic",
+      "score1": 102.8,
+      "seed2": 4,
+      "team2": "Marvelous Mamma",
+      "score2": 104.2
+    },
+    {
+      "season": 2025,
+      "week": 16,
+      "round": 2,
+      "gameType": "semifinal",
+      "seed1": 2,
+      "team1": "dad will win",
+      "score1": 91.3,
+      "seed2": 3,
+      "team2": "Pinkie pink 🏈",
+      "score2": 127.7
+    },
+    {
+      "season": 2025,
+      "week": 17,
+      "round": 3,
+      "gameType": "final",
+      "seed1": 3,
+      "team1": "Pinkie pink 🏈",
+      "score1": 118.4,
+      "seed2": 4,
+      "team2": "Marvelous Mamma",
+      "score2": 80.8
+    },
+    {
+      "season": 2025,
+      "week": 17,
+      "round": 3,
+      "gameType": "3rd_place",
+      "seed1": 1,
+      "team1": "Daphne's Magic",
+      "score1": 87.5,
+      "seed2": 2,
+      "team2": "dad will win",
+      "score2": 74.7
+    }
+  ],
+  "draftPicks": [
+    {
+      "season": 2023,
+      "round": 1,
+      "pickInRound": 1,
+      "overallPick": 1,
+      "teamName": "Daphne's Magic",
+      "playerName": "Aaron Rodgers"
+    },
+    {
+      "season": 2023,
+      "round": 1,
+      "pickInRound": 2,
+      "overallPick": 2,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Geno Smith"
+    },
+    {
+      "season": 2023,
+      "round": 1,
+      "pickInRound": 3,
+      "overallPick": 3,
+      "teamName": "dad will win",
+      "playerName": "Kenneth Walker III"
+    },
+    {
+      "season": 2023,
+      "round": 1,
+      "pickInRound": 4,
+      "overallPick": 4,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Tyler Lockett"
+    },
+    {
+      "season": 2023,
+      "round": 2,
+      "pickInRound": 1,
+      "overallPick": 5,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Patrick Mahomes"
+    },
+    {
+      "season": 2023,
+      "round": 2,
+      "pickInRound": 2,
+      "overallPick": 6,
+      "teamName": "dad will win",
+      "playerName": "Garrett Wilson"
+    },
+    {
+      "season": 2023,
+      "round": 2,
+      "pickInRound": 3,
+      "overallPick": 7,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Dalvin Cook"
+    },
+    {
+      "season": 2023,
+      "round": 2,
+      "pickInRound": 4,
+      "overallPick": 8,
+      "teamName": "Daphne's Magic",
+      "playerName": "DK Metcalf"
+    },
+    {
+      "season": 2023,
+      "round": 3,
+      "pickInRound": 1,
+      "overallPick": 9,
+      "teamName": "Daphne's Magic",
+      "playerName": "Aaron Jones Sr."
+    },
+    {
+      "season": 2023,
+      "round": 3,
+      "pickInRound": 2,
+      "overallPick": 10,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Christian Watson"
+    },
+    {
+      "season": 2023,
+      "round": 3,
+      "pickInRound": 3,
+      "overallPick": 11,
+      "teamName": "dad will win",
+      "playerName": "Luke Musgrave"
+    },
+    {
+      "season": 2023,
+      "round": 3,
+      "pickInRound": 4,
+      "overallPick": 12,
+      "teamName": "Marvelous Mamma",
+      "playerName": "AJ Dillon"
+    },
+    {
+      "season": 2023,
+      "round": 4,
+      "pickInRound": 1,
+      "overallPick": 13,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Tyler Conklin"
+    },
+    {
+      "season": 2023,
+      "round": 4,
+      "pickInRound": 2,
+      "overallPick": 14,
+      "teamName": "dad will win",
+      "playerName": "Jordan Love"
+    },
+    {
+      "season": 2023,
+      "round": 4,
+      "pickInRound": 3,
+      "overallPick": 15,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Mark Andrews"
+    },
+    {
+      "season": 2023,
+      "round": 4,
+      "pickInRound": 4,
+      "overallPick": 16,
+      "teamName": "Daphne's Magic",
+      "playerName": "Travis Kelce"
+    },
+    {
+      "season": 2023,
+      "round": 5,
+      "pickInRound": 1,
+      "overallPick": 17,
+      "teamName": "Daphne's Magic",
+      "playerName": "Harrison Butker"
+    },
+    {
+      "season": 2023,
+      "round": 5,
+      "pickInRound": 2,
+      "overallPick": 18,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Jason Sanders"
+    },
+    {
+      "season": 2023,
+      "round": 5,
+      "pickInRound": 3,
+      "overallPick": 19,
+      "teamName": "dad will win",
+      "playerName": "Jason Myers"
+    },
+    {
+      "season": 2023,
+      "round": 5,
+      "pickInRound": 4,
+      "overallPick": 20,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Mason Crosby"
+    },
+    {
+      "season": 2024,
+      "round": 1,
+      "pickInRound": 1,
+      "overallPick": 1,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Evan Engram"
+    },
+    {
+      "season": 2024,
+      "round": 1,
+      "pickInRound": 2,
+      "overallPick": 2,
+      "teamName": "dad will win",
+      "playerName": "Jordan Love"
+    },
+    {
+      "season": 2024,
+      "round": 1,
+      "pickInRound": 3,
+      "overallPick": 3,
+      "teamName": "Marvelous Mamma",
+      "playerName": "DK Metcalf"
+    },
+    {
+      "season": 2024,
+      "round": 1,
+      "pickInRound": 4,
+      "overallPick": 4,
+      "teamName": "Daphne's Magic",
+      "playerName": "Aaron Rodgers"
+    },
+    {
+      "season": 2024,
+      "round": 2,
+      "pickInRound": 1,
+      "overallPick": 5,
+      "teamName": "Daphne's Magic",
+      "playerName": "CeeDee Lamb"
+    },
+    {
+      "season": 2024,
+      "round": 2,
+      "pickInRound": 2,
+      "overallPick": 6,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Patrick Mahomes"
+    },
+    {
+      "season": 2024,
+      "round": 2,
+      "pickInRound": 3,
+      "overallPick": 7,
+      "teamName": "dad will win",
+      "playerName": "Breece Hall"
+    },
+    {
+      "season": 2024,
+      "round": 2,
+      "pickInRound": 4,
+      "overallPick": 8,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Tua Tagovailoa"
+    },
+    {
+      "season": 2024,
+      "round": 3,
+      "pickInRound": 1,
+      "overallPick": 9,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Jaxon Smith-Njigba"
+    },
+    {
+      "season": 2024,
+      "round": 3,
+      "pickInRound": 2,
+      "overallPick": 10,
+      "teamName": "dad will win",
+      "playerName": "Mark Andrews"
+    },
+    {
+      "season": 2024,
+      "round": 3,
+      "pickInRound": 3,
+      "overallPick": 11,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Christian McCaffrey"
+    },
+    {
+      "season": 2024,
+      "round": 3,
+      "pickInRound": 4,
+      "overallPick": 12,
+      "teamName": "Daphne's Magic",
+      "playerName": "Travis Etienne Jr."
+    },
+    {
+      "season": 2024,
+      "round": 4,
+      "pickInRound": 1,
+      "overallPick": 13,
+      "teamName": "Daphne's Magic",
+      "playerName": "David Njoku"
+    },
+    {
+      "season": 2024,
+      "round": 4,
+      "pickInRound": 2,
+      "overallPick": 14,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Sam LaPorta"
+    },
+    {
+      "season": 2024,
+      "round": 4,
+      "pickInRound": 3,
+      "overallPick": 15,
+      "teamName": "dad will win",
+      "playerName": "Amon-Ra St. Brown"
+    },
+    {
+      "season": 2024,
+      "round": 4,
+      "pickInRound": 4,
+      "overallPick": 16,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Alvin Kamara"
+    },
+    {
+      "season": 2024,
+      "round": 5,
+      "pickInRound": 1,
+      "overallPick": 17,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Brandon Aubrey"
+    },
+    {
+      "season": 2024,
+      "round": 5,
+      "pickInRound": 2,
+      "overallPick": 18,
+      "teamName": "dad will win",
+      "playerName": "Harrison Butker"
+    },
+    {
+      "season": 2024,
+      "round": 5,
+      "pickInRound": 3,
+      "overallPick": 19,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Justin Tucker"
+    },
+    {
+      "season": 2024,
+      "round": 5,
+      "pickInRound": 4,
+      "overallPick": 20,
+      "teamName": "Daphne's Magic",
+      "playerName": "Jason Myers"
+    },
+    {
+      "season": 2024,
+      "round": 6,
+      "pickInRound": 1,
+      "overallPick": 21,
+      "teamName": "Daphne's Magic",
+      "playerName": "Tyreek Hill"
+    },
+    {
+      "season": 2024,
+      "round": 6,
+      "pickInRound": 2,
+      "overallPick": 22,
+      "teamName": "Marvelous Mamma",
+      "playerName": "DJ Moore"
+    },
+    {
+      "season": 2024,
+      "round": 6,
+      "pickInRound": 3,
+      "overallPick": 23,
+      "teamName": "dad will win",
+      "playerName": "Tyler Lockett"
+    },
+    {
+      "season": 2024,
+      "round": 6,
+      "pickInRound": 4,
+      "overallPick": 24,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Chuba Hubbard"
+    },
+    {
+      "season": 2024,
+      "round": 7,
+      "pickInRound": 1,
+      "overallPick": 25,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Puka Nacua"
+    },
+    {
+      "season": 2024,
+      "round": 7,
+      "pickInRound": 2,
+      "overallPick": 26,
+      "teamName": "dad will win",
+      "playerName": "Saquon Barkley"
+    },
+    {
+      "season": 2024,
+      "round": 7,
+      "pickInRound": 3,
+      "overallPick": 27,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Matthew Stafford"
+    },
+    {
+      "season": 2024,
+      "round": 7,
+      "pickInRound": 4,
+      "overallPick": 28,
+      "teamName": "Daphne's Magic",
+      "playerName": "Jared Goff"
+    },
+    {
+      "season": 2025,
+      "round": 1,
+      "pickInRound": 1,
+      "overallPick": 1,
+      "teamName": "Daphne's Magic",
+      "playerName": "Aaron Rodgers"
+    },
+    {
+      "season": 2025,
+      "round": 1,
+      "pickInRound": 2,
+      "overallPick": 2,
+      "teamName": "dad will win",
+      "playerName": "Baker Mayfield"
+    },
+    {
+      "season": 2025,
+      "round": 1,
+      "pickInRound": 3,
+      "overallPick": 3,
+      "teamName": "Marvelous Mamma",
+      "playerName": "DK Metcalf"
+    },
+    {
+      "season": 2025,
+      "round": 1,
+      "pickInRound": 4,
+      "overallPick": 4,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Tyreek Hill"
+    },
+    {
+      "season": 2025,
+      "round": 2,
+      "pickInRound": 1,
+      "overallPick": 5,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Trey McBride"
+    },
+    {
+      "season": 2025,
+      "round": 2,
+      "pickInRound": 2,
+      "overallPick": 6,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Kenneth Walker III"
+    },
+    {
+      "season": 2025,
+      "round": 2,
+      "pickInRound": 3,
+      "overallPick": 7,
+      "teamName": "dad will win",
+      "playerName": "Jaxon Smith-Njigba"
+    },
+    {
+      "season": 2025,
+      "round": 2,
+      "pickInRound": 4,
+      "overallPick": 8,
+      "teamName": "Daphne's Magic",
+      "playerName": "Josh Jacobs"
+    },
+    {
+      "season": 2025,
+      "round": 3,
+      "pickInRound": 1,
+      "overallPick": 9,
+      "teamName": "Daphne's Magic",
+      "playerName": "Harrison Butker"
+    },
+    {
+      "season": 2025,
+      "round": 3,
+      "pickInRound": 2,
+      "overallPick": 10,
+      "teamName": "dad will win",
+      "playerName": "Kyren Williams"
+    },
+    {
+      "season": 2025,
+      "round": 3,
+      "pickInRound": 3,
+      "overallPick": 11,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Patrick Mahomes"
+    },
+    {
+      "season": 2025,
+      "round": 3,
+      "pickInRound": 4,
+      "overallPick": 12,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Sam Darnold"
+    },
+    {
+      "season": 2025,
+      "round": 4,
+      "pickInRound": 1,
+      "overallPick": 13,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Travis Etienne Jr."
+    },
+    {
+      "season": 2025,
+      "round": 4,
+      "pickInRound": 2,
+      "overallPick": 14,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Brock Bowers"
+    },
+    {
+      "season": 2025,
+      "round": 4,
+      "pickInRound": 3,
+      "overallPick": 15,
+      "teamName": "dad will win",
+      "playerName": "Tucker Kraft"
+    },
+    {
+      "season": 2025,
+      "round": 4,
+      "pickInRound": 4,
+      "overallPick": 16,
+      "teamName": "Daphne's Magic",
+      "playerName": "Dalton Kincaid"
+    },
+    {
+      "season": 2025,
+      "round": 5,
+      "pickInRound": 1,
+      "overallPick": 17,
+      "teamName": "Daphne's Magic",
+      "playerName": "Ja'Marr Chase"
+    },
+    {
+      "season": 2025,
+      "round": 5,
+      "pickInRound": 2,
+      "overallPick": 18,
+      "teamName": "dad will win",
+      "playerName": "Evan McPherson"
+    },
+    {
+      "season": 2025,
+      "round": 5,
+      "pickInRound": 3,
+      "overallPick": 19,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Jake Elliott"
+    },
+    {
+      "season": 2025,
+      "round": 5,
+      "pickInRound": 4,
+      "overallPick": 20,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Ryan Fitzgerald"
+    },
+    {
+      "season": 2025,
+      "round": 6,
+      "pickInRound": 1,
+      "overallPick": 21,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Justin Herbert"
+    },
+    {
+      "season": 2025,
+      "round": 6,
+      "pickInRound": 2,
+      "overallPick": 22,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Cooper Kupp"
+    },
+    {
+      "season": 2025,
+      "round": 6,
+      "pickInRound": 3,
+      "overallPick": 23,
+      "teamName": "dad will win",
+      "playerName": "Saquon Barkley"
+    },
+    {
+      "season": 2025,
+      "round": 6,
+      "pickInRound": 4,
+      "overallPick": 24,
+      "teamName": "Daphne's Magic",
+      "playerName": "Justin Jefferson"
+    },
+    {
+      "season": 2025,
+      "round": 7,
+      "pickInRound": 1,
+      "overallPick": 25,
+      "teamName": "Daphne's Magic",
+      "playerName": "Jalen Hurts"
+    },
+    {
+      "season": 2025,
+      "round": 7,
+      "pickInRound": 2,
+      "overallPick": 26,
+      "teamName": "dad will win",
+      "playerName": "Lamar Jackson"
+    },
+    {
+      "season": 2025,
+      "round": 7,
+      "pickInRound": 3,
+      "overallPick": 27,
+      "teamName": "Marvelous Mamma",
+      "playerName": "Caleb Williams"
+    },
+    {
+      "season": 2025,
+      "round": 7,
+      "pickInRound": 4,
+      "overallPick": 28,
+      "teamName": "Pinkie pink 🏈",
+      "playerName": "Bijan Robinson"
+    }
+  ],
+  "leagueSettings": [
+    {
+      "season": 2023,
+      "numTeams": 4,
+      "scoringType": "Head-to-Head",
+      "draftType": "Offline Draft",
+      "rosterSlots": "QB, WR, RB, TE, K, BN, BN, IR",
+      "divisions": "No",
+      "waiverType": "Continual rolling list",
+      "playoffTiebreaker": "Higher seed wins"
+    },
+    {
+      "season": 2024,
+      "numTeams": 4,
+      "scoringType": "Head-to-Head",
+      "draftType": "Offline Draft",
+      "rosterSlots": "QB, WR, RB, TE, K, BN, BN, IR",
+      "divisions": "No",
+      "waiverType": "Continual rolling list",
+      "playoffTiebreaker": "Higher seed wins"
+    },
+    {
+      "season": 2025,
+      "numTeams": 4,
+      "scoringType": "Head-to-Head",
+      "draftType": "Offline Draft",
+      "rosterSlots": "QB, WR, RB, TE, K, BN, BN, IR",
+      "divisions": "No",
+      "waiverType": "Continual rolling list",
+      "playoffTiebreaker": "Higher seed wins"
+    }
+  ]
+}

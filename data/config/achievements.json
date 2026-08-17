@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "categories": [
+    { "id": "league", "label": "On the Field", "description": "Wins, scores, comebacks, and championships." },
+    { "id": "draft", "label": "Draft Day", "description": "Smart picks and memorable draft moments." },
+    { "id": "participation", "label": "All In", "description": "Showing up, making picks, and joining the fun." },
+    { "id": "family_spirit", "label": "Family Spirit", "description": "Kindness, encouragement, and good sportsmanship." },
+    { "id": "memory", "label": "Clubhouse Memories", "description": "Funny, sweet, and unforgettable family moments." }
+  ],
+  "achievements": [
+    { "id": "league_champion", "name": "League Champion", "icon": "🏆", "category": "league", "description": "Won the Espinosa FFL championship.", "awardMethod": "automatic", "ruleKey": "championship_winner", "repeatable": true },
+    { "id": "weekly_high_score", "name": "Scoreboard Smasher", "icon": "💥", "category": "league", "description": "Posted the family league's highest score of the week.", "awardMethod": "automatic", "ruleKey": "weekly_high_score", "repeatable": true },
+    { "id": "comeback_win", "name": "Never Give Up", "icon": "🚀", "category": "league", "description": "Came back to win after trailing in the matchup.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "rivalry_win", "name": "Bragging Rights", "icon": "😤", "category": "league", "description": "Won the featured family rivalry game.", "awardMethod": "automatic", "ruleKey": "featured_rivalry_winner", "repeatable": true },
+
+    { "id": "first_pick", "name": "First Pick Ever", "icon": "1️⃣", "category": "draft", "description": "Made a first official family draft pick.", "awardMethod": "automatic", "ruleKey": "manager_first_pick", "repeatable": false },
+    { "id": "favorite_player", "name": "Got My Favorite", "icon": "😍", "category": "draft", "description": "Drafted a player marked as a favorite.", "awardMethod": "automatic", "ruleKey": "drafted_favorite", "repeatable": true },
+    { "id": "draft_surprise", "name": "Draft Surprise", "icon": "🎁", "category": "draft", "description": "Made the pick nobody in the room expected.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "roster_complete", "name": "Team Builder", "icon": "🧱", "category": "draft", "description": "Finished a complete draft-day roster.", "awardMethod": "automatic", "ruleKey": "roster_complete", "repeatable": true },
+
+    { "id": "prediction_picker", "name": "I Made My Picks", "icon": "🔮", "category": "participation", "description": "Made every family prediction for a week.", "awardMethod": "automatic", "ruleKey": "weekly_predictions_complete", "repeatable": true },
+    { "id": "mvp_voter", "name": "MVP Voter", "icon": "⭐", "category": "participation", "description": "Chose a Kids' MVP for the week.", "awardMethod": "automatic", "ruleKey": "weekly_mvp_vote", "repeatable": true },
+    { "id": "season_regular", "name": "Clubhouse Regular", "icon": "🏠", "category": "participation", "description": "Joined at least ten weekly clubhouse check-ins.", "awardMethod": "automatic", "ruleKey": "ten_weekly_checkins", "repeatable": true },
+    { "id": "challenge_try", "name": "Challenge Accepted", "icon": "🎯", "category": "participation", "description": "Tried a family weekly challenge.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+
+    { "id": "great_sport", "name": "Great Sport", "icon": "🤝", "category": "family_spirit", "description": "Handled a tough result with kindness.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "biggest_cheerleader", "name": "Biggest Cheerleader", "icon": "📣", "category": "family_spirit", "description": "Made someone else feel great about their team.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "helping_hand", "name": "Helping Hand", "icon": "🙌", "category": "family_spirit", "description": "Helped another manager understand a player or choice.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "family_first", "name": "Family First", "icon": "❤️", "category": "family_spirit", "description": "Made the clubhouse more fun for everyone.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+
+    { "id": "funniest_moment", "name": "Funniest Moment", "icon": "😂", "category": "memory", "description": "Created a moment the family wants to remember.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "draft_day_memory", "name": "Draft Day Memory", "icon": "📸", "category": "memory", "description": "Was part of a favorite draft-day story or photo.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "big_prediction", "name": "Called It!", "icon": "🔔", "category": "memory", "description": "Made a bold prediction that came true.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true },
+    { "id": "season_story", "name": "Season Story", "icon": "📖", "category": "memory", "description": "Was part of one of the season's defining family stories.", "awardMethod": "commissioner", "ruleKey": null, "repeatable": true }
+  ]
+}

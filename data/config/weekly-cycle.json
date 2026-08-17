@@ -1,0 +1,81 @@
+{
+  "timezone": "America/Chicago",
+  "officialResultsSource": "yahoo",
+  "principles": [
+    "One short family check-in can complete the important activities.",
+    "Participation is celebrated and never required.",
+    "Pictures and faces work without reading or understanding projections.",
+    "Yahoo remains the official source for scores and matchup results.",
+    "The commissioner confirms results before awards and memories become final."
+  ],
+  "stages": [
+    {
+      "id": "tuesday_recap",
+      "label": "Tuesday Trophy Time",
+      "day": "Tuesday",
+      "icon": "🏆",
+      "headline": "Celebrate last week",
+      "description": "Reveal final results, the weekly high score, prediction results, achievements, and one favorite family moment.",
+      "primaryAction": "See the recap",
+      "optional": false,
+      "locks": []
+    },
+    {
+      "id": "new_week_picks",
+      "label": "Pick the Winners",
+      "day": "Tuesday–Thursday",
+      "icon": "🔮",
+      "headline": "Choose who will win",
+      "description": "Tap a manager picture for each family matchup, then choose a happy, unsure, or super-confident face.",
+      "primaryAction": "Make my picks",
+      "optional": false,
+      "locks": ["Each matchup locks when its NFL games begin; other matchups stay open."]
+    },
+    {
+      "id": "game_of_week",
+      "label": "Game of the Week",
+      "day": "Thursday–Monday",
+      "icon": "⚔️",
+      "headline": "The family spotlight",
+      "description": "Feature one matchup, rivalry story, and a simple question the whole family can answer.",
+      "primaryAction": "See the matchup",
+      "optional": true,
+      "locks": []
+    },
+    {
+      "id": "weekend_fun",
+      "label": "Weekend Fun",
+      "day": "Saturday–Monday",
+      "icon": "⭐",
+      "headline": "Pick an MVP or try a challenge",
+      "description": "Choose a favorite player by picture, try an optional family challenge, or send a friendly prewritten reaction.",
+      "primaryAction": "Join the fun",
+      "optional": true,
+      "locks": ["MVP choices close before Tuesday recap."]
+    },
+    {
+      "id": "commissioner_finalize",
+      "label": "Make It Official",
+      "day": "Tuesday",
+      "icon": "✅",
+      "headline": "Confirm the week",
+      "description": "The commissioner enters or confirms Yahoo results, picks the family-memory awards, and publishes the recap.",
+      "primaryAction": "Finalize the week",
+      "optional": false,
+      "commissionerOnly": true,
+      "locks": ["Published results are editable by the commissioner without deleting their history."]
+    }
+  ],
+  "confidenceChoices": [
+    { "id": "unsure", "label": "Could go either way", "icon": "🤔" },
+    { "id": "confident", "label": "I think they win", "icon": "🙂" },
+    { "id": "super", "label": "Super confident", "icon": "🤩" }
+  ],
+  "participationRules": {
+    "requiredForWeeklyCompletion": ["family matchup predictions"],
+    "alwaysOptional": ["Game of the Week question", "Kids' MVP", "weekly challenge", "friendly reaction"],
+    "lateJoinAllowed": true,
+    "missedWeekPenalty": false,
+    "futureManagerCanParticipate": true
+  }
+}
