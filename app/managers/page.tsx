@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ManagerIdentity } from "@/components/manager-identity";
+import { TeamLogo } from "@/components/team-logo";
 import { CLUBHOUSE_FAMILY, MANAGER_ORDER, getAllTimeStandings, getChampions, getManagerCareerStats, getRivalryStats, getSeasonStandings, seasonList } from "@/lib/league";
 
 export const metadata: Metadata = { title: "Locker Room" };
@@ -23,6 +24,7 @@ export default function ManagersPage() {
       <div className="hq-managers-row">
         {careers.map((career) => <article className="hq-profile-card" key={career.manager.id} style={{ borderTopColor: career.manager.color }}>
           <ManagerIdentity manager={career.manager} size="large" />
+          <TeamLogo manager={career.manager} size="large" />
           <h3 className="hq-profile-name" style={{ color: career.manager.color }}>{career.manager.name}</h3>
           <p className="hq-profile-team">&ldquo;{career.team}&rdquo;</p>
           <div className="hq-stat-grid">
@@ -37,6 +39,7 @@ export default function ManagersPage() {
         </article>)}
         {futureManagers.map((manager) => <article className="hq-profile-card hq-profile-card-future" key={manager.id} style={{ borderTopColor: manager.color }}>
           <ManagerIdentity manager={manager} size="large" />
+          <TeamLogo manager={manager} size="large" />
           <p className="hq-future-badge">Future Manager</p>
           <h3 className="hq-profile-name" style={{ color: manager.color }}>{manager.name}</h3>
           <p className="hq-profile-team">Clubhouse roster spot reserved</p>

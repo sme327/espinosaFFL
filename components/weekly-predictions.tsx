@@ -35,11 +35,16 @@ export function WeeklyPredictions({ season, week, family }: { season: number; we
   }
 
   const manager = (id: string) => family.find((candidate) => candidate.id === id);
+  const face = (person: Manager) => person.photoPath
+    ? <img className="weekly-manager-photo" src={person.photoPath} alt="" />
+    : person.teamLogoPath
+      ? <img className="weekly-manager-logo" src={person.teamLogoPath} alt="" />
+      : <span>{person.emoji}</span>;
   if (!data) return <div className="weekly-empty">Loading the family schedule…</div>;
   if (!data.matchups.length) return <div className="weekly-empty"><span>🗓️</span><h2>The prediction board is ready</h2><p>Week {week} matchups will appear here when the 2026 family schedule is added.</p><div className="weekly-face-preview">{faces.map((face) => <span key={face.id}>{face.icon}<small>{face.label}</small></span>)}</div></div>;
 
   return <div>
-    <div className="weekly-who"><strong>Who is making picks?</strong>{family.map((person) => <button type="button" className={participant === person.id ? "active" : ""} onClick={() => setParticipant(person.id)} key={person.id} style={{ "--pick-color": person.color } as React.CSSProperties}><span>{person.emoji}</span>{person.name}</button>)}</div>
+    <div className="weekly-who"><strong>Who is making picks?</strong>{family.map((person) => <button type="button" className={participant === person.id ? "active" : ""} onClick={() => setParticipant(person.id)} key={person.id} style={{ "--pick-color": person.color } as React.CSSProperties}>{face(person)}{person.name}</button>)}</div>
     <div className="weekly-matchups">{data.matchups.map((matchup) => {
       const a = manager(matchup.managerAId); const b = manager(matchup.managerBId);
       const saved = data.predictions.find((prediction) => prediction.matchupId === matchup.id && prediction.participantManagerId === participant);
@@ -47,7 +52,7 @@ export function WeeklyPredictions({ season, week, family }: { season: number; we
       return <article className="weekly-matchup" key={matchup.id}>
         {matchup.featured ? <span className="weekly-featured">⚔️ Game of the Week</span> : null}
         <h3>Who will win?</h3><div className="weekly-manager-choice">
-          {[a, b].map((person) => person && <button key={person.id} type="button" disabled={locked} className={saved?.predictedManagerId === person.id ? "selected" : ""} onClick={() => void choose(matchup, person.id, saved?.confidence ?? "confident")} style={{ "--pick-color": person.color, "--pick-light": person.lightColor } as React.CSSProperties}><span>{person.emoji}</span><strong>{person.name}</strong><small>{person.teamName}</small></button>)}
+          {[a, b].map((person) => person && <button key={person.id} type="button" disabled={locked} className={saved?.predictedManagerId === person.id ? "selected" : ""} onClick={() => void choose(matchup, person.id, saved?.confidence ?? "confident")} style={{ "--pick-color": person.color, "--pick-light": person.lightColor } as React.CSSProperties}>{face(person)}<strong>{person.name}</strong><small>{person.teamName}</small></button>)}
         </div><div className="weekly-confidence" aria-label="How confident are you?">{faces.map((face) => <button type="button" disabled={locked || !saved} className={saved?.confidence === face.id ? "selected" : ""} key={face.id} onClick={() => saved && void choose(matchup, saved.predictedManagerId, face.id)} aria-label={face.label}>{face.icon}<small>{face.label}</small></button>)}</div>
         {locked ? <p className="weekly-locked">🔒 This matchup has started.</p> : null}
       </article>;

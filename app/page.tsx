@@ -1,4 +1,5 @@
 import { ClubhouseLink as Link } from "@/components/clubhouse-link";
+import { TeamLogo } from "@/components/team-logo";
 import { FOUNDED, getChampions, getRivalryStats, recentEvents, rivalrySpotlightPair, seasonList, seasonNoteFor } from "@/lib/league";
 
 const ROOMS = [
@@ -41,7 +42,8 @@ export default function Overview() {
           <span className="hq-confetti hq-confetti-right" aria-hidden="true">🎊 🎉 🎊</span>
           <span className="hq-champ-trophy" aria-hidden="true">🏆</span>
           <p className="eyebrow">✦ {reigning.season} League Champion ✦</p>
-          <h2 className="hq-champ-name" style={{ color: reigning.championManager?.color }}>{reigning.championManager?.emoji} {reigning.championManager?.name}</h2>
+          {reigning.championManager && <TeamLogo manager={reigning.championManager} size="large" />}
+          <h2 className="hq-champ-name" style={{ color: reigning.championManager?.color }}>{reigning.championManager?.name}</h2>
           <p className="hq-champ-team">&ldquo;{reigning.championTeam}&rdquo;</p>
           <p className="hq-champ-score">{reigning.championScore.toFixed(1)} – {reigning.runnerUpScore.toFixed(1)} • defeated {reigning.runnerUpManager?.name}</p>
           {note && <p className="hq-champ-tagline">{note.tagline}</p>}
@@ -96,7 +98,7 @@ export default function Overview() {
         <p className="hq-shelf-sub">Every trophy. Every season. The museum never forgets.</p>
         <div className="hq-shelf-rail">
           {champions.map((champ) => <div className="hq-shelf-item" key={champ.season}>
-            <span className="hq-shelf-icon">{champ.championManager?.emoji}</span>
+            {champ.championManager && <TeamLogo manager={champ.championManager} size="medium" />}
             <p className="hq-shelf-year">{champ.season}</p>
             <p className="hq-shelf-name" style={{ color: champ.championManager?.color }}>{champ.championManager?.name}</p>
             <p className="hq-shelf-team">{champ.championTeam}</p>

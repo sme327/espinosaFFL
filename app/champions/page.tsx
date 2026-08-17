@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ClubhouseLink as Link } from "@/components/clubhouse-link";
+import { TeamLogo } from "@/components/team-logo";
 import { FOUNDED, MANAGER_ORDER, getChampions, seasonNoteFor } from "@/lib/league";
 
 export const metadata: Metadata = { title: "Trophy Room" };
@@ -25,7 +26,7 @@ export default function ChampionsPage() {
       <div className="hq-champ-card">
         <span className="hq-champ-trophy" aria-hidden="true">🏆</span>
         <p className="eyebrow">{reigning.season} Champion</p>
-        <span className="hq-champ-emoji" aria-hidden="true">{reigning.championManager?.emoji}</span>
+        {reigning.championManager && <TeamLogo manager={reigning.championManager} size="large" />}
         <h3 className="hq-champ-name" style={{ color: reigning.championManager?.color }}>{reigning.championManager?.name}</h3>
         <p className="hq-champ-team">&ldquo;{reigning.championTeam}&rdquo;</p>
         <p className="hq-champ-score">Defeated {reigning.runnerUpManager?.name} · {reigning.championScore}–{reigning.runnerUpScore}</p>
@@ -38,7 +39,7 @@ export default function ChampionsPage() {
       <div className="hq-champions-row">
         {champions.map((champ) => <article className="hq-mini-champ-card" key={champ.season} style={{ borderTopColor: champ.championManager?.color }}>
           <p className="hq-mini-champ-season" style={{ color: champ.championManager?.color }}>{champ.season}</p>
-          <span className="hq-mini-champ-emoji" aria-hidden="true">{champ.championManager?.emoji}</span>
+          {champ.championManager && <TeamLogo manager={champ.championManager} size="medium" />}
           <p className="hq-mini-champ-name" style={{ color: champ.championManager?.color }}>{champ.championManager?.name}</p>
           <p className="hq-mini-champ-team">{champ.championTeam}</p>
           <hr />

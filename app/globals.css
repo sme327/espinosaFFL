@@ -400,6 +400,18 @@ footer.hq-footer .hq-footer-tag { color:#A5ACAF; }
 .hq-table tbody tr:nth-child(even) { background:#C4CDD0; }
 .hq-profile-avatar,.manager-identity-avatar { border-color:var(--action-green); }
 .manager-identity-copy small,.hq-profile-team,.hq-profile-line span { color:var(--muted); }
+
+.team-logo { display:inline-grid; place-items:center; overflow:hidden; flex:0 0 auto; background:#002244; border:2px solid rgba(165,172,175,.75); box-shadow:0 8px 20px rgba(0,34,68,.2); }
+.team-logo img { display:block; width:100%; height:100%; object-fit:cover; }
+.team-logo-small { width:40px; height:40px; }
+.team-logo-medium { width:72px; height:72px; }
+.team-logo-large { width:116px; height:116px; }
+.hq-profile-card > .team-logo { margin-top:14px; }
+.hq-champ-card > .team-logo,.hq-champ-featured > .team-logo { margin:10px auto; }
+.hq-mini-champ-card > .team-logo,.hq-shelf-item > .team-logo { margin:8px auto; }
+.weekly-manager-photo,.weekly-manager-logo { display:block; width:48px; height:48px; object-fit:cover; border:2px solid var(--pick-color); }
+.weekly-manager-photo { border-radius:50%; }
+.weekly-who .weekly-manager-photo,.weekly-who .weekly-manager-logo { width:28px; height:28px; }
 .hq-rivalry-columns { gap:1px; background:var(--line); }
 .hq-rivalry-columns > div { gap:1px; }
 .hq-rivalry-card { margin:0; }

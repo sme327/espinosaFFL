@@ -17,7 +17,7 @@
       "active": true,
       "clubhouseMember": true,
       "photoPath": null,
-      "teamLogoPath": null,
+      "teamLogoPath": "/brand/dad-will-win-v2.png",
       "soundPath": null,
       "celebration": null,
       "interfaceMode": null
@@ -33,7 +33,7 @@
       "active": true,
       "clubhouseMember": true,
       "photoPath": null,
-      "teamLogoPath": null,
+      "teamLogoPath": "/brand/marvelous-mamma-v2.png",
       "soundPath": null,
       "celebration": null,
       "interfaceMode": null
@@ -49,7 +49,7 @@
       "active": true,
       "clubhouseMember": true,
       "photoPath": "/family/daphne.png",
-      "teamLogoPath": null,
+      "teamLogoPath": "/brand/daphnes-magic-v2.png",
       "soundPath": null,
       "celebration": null,
       "interfaceMode": null
@@ -65,7 +65,7 @@
       "active": true,
       "clubhouseMember": true,
       "photoPath": "/family/elliot.png",
-      "teamLogoPath": null,
+      "teamLogoPath": "/brand/pinkie-pink-v2.png",
       "soundPath": null,
       "celebration": null,
       "interfaceMode": null
@@ -81,7 +81,7 @@
       "active": false,
       "clubhouseMember": true,
       "photoPath": null,
-      "teamLogoPath": null,
+      "teamLogoPath": "/brand/wyatt-future-manager-v2.png",
       "soundPath": null,
       "celebration": null,
       "interfaceMode": null
