@@ -6,6 +6,7 @@ const ROOMS = [
   { key: "scrapbook", icon: ["📷", "📖", "🎉"], title: "Season Scrapbook", href: "/seasons", desc: "Relive the standings, playoffs, and draft day moments.", color: "var(--room-scrapbook)", gradient: "linear-gradient(160deg,#EEF5FF 0%,#90C4FF 100%)" },
   { key: "locker", icon: ["🎽", "👥", "🧦"], title: "Locker Room", href: "/managers", desc: "Manager profiles, career records, and personal bests.", color: "var(--room-locker)", gradient: "linear-gradient(160deg,#EEF7EF 0%,#80CC80 100%)" },
   { key: "rivalry", icon: ["😤", "🥊", "😈"], title: "Rivalry Arena", href: "/rivalries", desc: "Every grudge. Every bragging right. Head-to-head history.", color: "var(--room-rivalry)", gradient: "linear-gradient(160deg,#FEF0F8 0%,#F080C0 100%)" },
+  { key: "weekly", icon: ["🏈", "🔮", "⭐"], title: "Weekly Fun", href: "/weekly", desc: "Make family picks, choose an MVP, and celebrate the week.", color: "var(--action-green)", gradient: "linear-gradient(160deg,#B9C6CA 0%,#91B39A 100%)" },
   { key: "achievement", icon: ["🎖️", "🎯", "🏅"], title: "Achievement Wall", href: null, desc: "Badges, stickers, and collectible achievements. Coming soon!", color: "var(--room-achievement)", gradient: "linear-gradient(160deg,#F0EEF8 0%,#C8B8E8 100%)" },
   { key: "draft", icon: ["📝", "📋", "🎲"], title: "Draft Room", href: "/draft", desc: "Meet the draft class and get ready to build your 2026 team.", color: "var(--room-draft)", gradient: "linear-gradient(160deg,#F5F0FF 0%,#B8A0E0 100%)" },
 ] as const;
