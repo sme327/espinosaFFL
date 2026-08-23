@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ManagerIdentity } from "@/components/manager-identity";
 import { PlayerIdentity, type DraftPlayerIdentity } from "@/components/player-identity";
 import { TeamLogo } from "@/components/team-logo";
+import { RoomHero } from "@/components/room-hero";
 import playerPool from "@/data/draft/players-2026.json";
 import { familyDraftForSeason } from "@/lib/family-draft";
 import { managerById } from "@/lib/league";
@@ -19,12 +20,7 @@ export default function DraftRoomPage() {
   const featured = playerPool.players.slice(0, 12) as DraftRoomPlayer[];
 
   return <main className="page-wrap inner-page draft-room-page">
-    <header className="draft-room-hero">
-      <p className="eyebrow">🏈 Espinosa Family Draft</p>
-      <h1>2026 Draft Room</h1>
-      <p>Big pictures, simple choices, and one shared board for the whole family.</p>
-      <span className="draft-status-pill">Getting ready for draft day</span>
-    </header>
+    <RoomHero room="draft" label="Espinosa Family Draft" title="2026 Draft Room" status="Getting ready for draft day">Big pictures, simple choices, and one shared board for the whole family.</RoomHero>
 
     <section className="hq-section">
       <div className="section-heading"><h2>Who&rsquo;s Drafting?</h2><span>4 teams this season · Wyatt&rsquo;s seat is saved</span></div>

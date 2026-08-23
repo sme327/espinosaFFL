@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ClubhouseLink as Link } from "@/components/clubhouse-link";
+import { RoomHero } from "@/components/room-hero";
 import { draftPicks, getChampions, getSeasonPlayoffs, getSeasonStandings, managerForTeam, seasonList, seasonNoteFor } from "@/lib/league";
 
 export function generateMetadata({ params }: { params: Promise<{ year: string }> }): Promise<Metadata> {
@@ -37,11 +38,7 @@ export default async function SeasonPage({ params }: { params: Promise<{ year: s
   const rounds = [...new Set(picksThisSeason.map((pick) => pick.round))].filter((round) => round <= 5).sort((a, b) => a - b);
 
   return <main className="page-wrap inner-page">
-    <header className="page-intro">
-      <p className="eyebrow">📖 The Clubhouse</p>
-      <h1>Season Scrapbook</h1>
-      <p>Every week. Every win. Every memory.</p>
-    </header>
+    <RoomHero room="scrapbook" label={`${year} Stadium Program`} title="Season Scrapbook">Every week. Every win. Every memory.</RoomHero>
 
     <nav className="hq-season-picker" aria-label="Choose a season">
       {[...seasons].reverse().map((season) => <Link key={season} href={`/seasons/${season}`} aria-current={season === year ? "page" : undefined} className={season === year ? "active" : ""}>{season}</Link>)}

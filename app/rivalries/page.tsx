@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { RivalryStats } from "@/lib/league";
 import { getAllRivalries, playoffGames, managerForTeam } from "@/lib/league";
+import { RoomHero } from "@/components/room-hero";
 
 export const metadata: Metadata = { title: "Rivalry Arena" };
 
@@ -49,11 +50,7 @@ export default function RivalriesPage() {
     .sort((a, b) => a.season - b.season || a.round - b.round);
 
   return <main className="page-wrap inner-page">
-    <header className="page-intro">
-      <p className="eyebrow">🥊 The Clubhouse</p>
-      <h1>Rivalry Arena</h1>
-      <p>Every matchup. Every grudge. Every bragging right.</p>
-    </header>
+    <RoomHero room="rivalry" label="Primetime Level" title="Rivalry Arena">Every matchup. Every grudge. Every bragging right.</RoomHero>
 
     <section className="hq-section">
       <div className="hq-rivalry-columns">

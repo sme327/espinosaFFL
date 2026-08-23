@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ClubhouseLink as Link } from "@/components/clubhouse-link";
 import { TeamLogo } from "@/components/team-logo";
+import { RoomHero } from "@/components/room-hero";
 import { FOUNDED, MANAGER_ORDER, getChampions, seasonNoteFor } from "@/lib/league";
 
 export const metadata: Metadata = { title: "Trophy Room" };
@@ -15,11 +16,7 @@ export default function ChampionsPage() {
   const chasers = MANAGER_ORDER.filter((manager) => !everWon.has(manager.id));
 
   return <main className="page-wrap inner-page">
-    <header className="page-intro">
-      <p className="eyebrow">🏆 The Clubhouse</p>
-      <h1>Trophy Room</h1>
-      <p>Every champion. Every season. Every memory.</p>
-    </header>
+    <RoomHero room="trophy" label="Championship Level" title="Trophy Room">Every champion. Every season. Every memory.</RoomHero>
 
     {reigning && <section className="hq-section">
       <div className="section-heading"><h2>Reigning Champion</h2><span>The last one standing</span></div>

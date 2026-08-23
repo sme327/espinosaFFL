@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ManagerIdentity } from "@/components/manager-identity";
 import { TeamLogo } from "@/components/team-logo";
+import { RoomHero } from "@/components/room-hero";
 import { achievementCategories, achievements, historicalAchievementsFor } from "@/lib/achievements";
 import { CLUBHOUSE_FAMILY } from "@/lib/league";
 
@@ -8,11 +9,7 @@ export const metadata: Metadata = { title: "Achievement Wall" };
 
 export default function AchievementsPage() {
   return <main className="page-wrap inner-page achievement-page">
-    <header className="page-intro achievement-intro">
-      <p className="eyebrow">The Family Hall of Fame</p>
-      <h1>Achievement Wall</h1>
-      <p>Winning is one way to shine. Showing up, helping, cheering, and making memories count too.</p>
-    </header>
+    <RoomHero room="achievements" label="The Family Hall of Fame" title="Achievement Wall">Winning is one way to shine. Showing up, helping, cheering, and making memories count too.</RoomHero>
 
     <section className="achievement-key" aria-label="Achievement categories">
       {achievementCategories.map((category) => <div key={category.id}><strong>{category.label}</strong><span>{category.description}</span></div>)}

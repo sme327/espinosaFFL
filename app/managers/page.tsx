@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ManagerIdentity } from "@/components/manager-identity";
 import { TeamLogo } from "@/components/team-logo";
+import { RoomHero } from "@/components/room-hero";
 import { CLUBHOUSE_FAMILY, MANAGER_ORDER, getAllTimeStandings, getChampions, getManagerCareerStats, getRivalryStats, getSeasonStandings, seasonList } from "@/lib/league";
 
 export const metadata: Metadata = { title: "Locker Room" };
@@ -13,11 +14,7 @@ export default function ManagersPage() {
   const futureManagers = CLUBHOUSE_FAMILY.filter((manager) => !manager.active);
 
   return <main className="page-wrap inner-page">
-    <header className="page-intro">
-      <p className="eyebrow">👥 The Clubhouse</p>
-      <h1>Locker Room</h1>
-      <p>Every manager. Every season. Every rivalry.</p>
-    </header>
+    <RoomHero room="locker" label="Home Team Tunnel" title="Locker Room">Every manager. Every season. Every rivalry.</RoomHero>
 
     <section className="hq-section">
       <div className="section-heading"><h2>Meet the Managers</h2><span>The Espinosa FFL roster</span></div>

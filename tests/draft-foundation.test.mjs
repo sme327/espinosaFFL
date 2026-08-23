@@ -99,6 +99,7 @@ test("the shared 2026 Draft Room is visible and has no clock", () => {
   assert.match(page, /No clock\. No rushing/);
   assert.match(page, /playerPool\.players\.slice/);
   assert.match(home, /href: "\/draft"/);
-  assert.match(header, /\["\/draft", "🗂️ Draft Room"\]/);
+  assert.match(header, /\["\/draft", "Draft Room", "draft"\]/);
+  assert.doesNotMatch(header, /🏠|🏆|📖|👥|🥊|🗂️|🔮|🎯/);
   assert.doesNotMatch(page, /countdown|pauseDraft|resumeDraft/i);
 });
