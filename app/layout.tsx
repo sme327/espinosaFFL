@@ -17,5 +17,21 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${fredoka.variable} ${nunito.variable}`}><SiteHeader />{children}</body></html>;
+  return (
+    <html lang="en">
+      <body className={`${fredoka.variable} ${nunito.variable}`}>
+        <SiteHeader />
+        {children}
+        {/* Cloudflare Web Analytics — plain script tag, same as the Dynasty 22
+            museum on this identical vinext/Workers stack; next/script's
+            afterInteractive strategy isn't something vinext's shim guarantees. */}
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"ad0732a55dae401bb2525a628d387dd0"}'
+        ></script>
+        {/* End Cloudflare Web Analytics */}
+      </body>
+    </html>
+  );
 }
