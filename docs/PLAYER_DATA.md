@@ -6,7 +6,7 @@ The Draft Room uses a static Yahoo player export already maintained by the serio
 
 The family importer reads:
 
-`../../Insert Witty Name Here/draft-room-2026/data/imports/yahoo-players-2026.json`
+`../../insert witty name here/Draft App/data/imports/yahoo-players-2026.json`
 
 It writes a smaller normalized pool to `data/draft/players-2026.json`.
 
