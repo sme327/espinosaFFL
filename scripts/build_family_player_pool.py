@@ -11,7 +11,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SOURCE = ROOT.parent / "Draft App" / "iwnh-draft-2026" / "data" / "imports" / "yahoo-players-2026.json"
+# This repo lives at "<Fantasy Football Leagues>/Espinosa FFL Clubhouse/Clubhouse/";
+# the serious draft app's player export is two levels up, in the IWNH league folder.
+LEAGUES_DIR = ROOT.parents[1]
+DEFAULT_SOURCE = LEAGUES_DIR / "Insert Witty Name Here" / "draft-room-2026" / "data" / "imports" / "yahoo-players-2026.json"
 DEFAULT_OUTPUT = ROOT / "data" / "draft" / "players-2026.json"
 POSITIONS = {"QB", "RB", "WR", "TE", "K", "DEF"}
 MAX_PRESEASON_RANK = 350
