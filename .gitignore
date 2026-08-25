@@ -22,3 +22,12 @@ node_modules/
 # Python
 __pycache__/
 *.py[cod]
+
+# Yahoo session — never commit
+.yahoo_cookies.json
+
+# Contains real email addresses — keep private
+data/source/season_managers.csv
+
+# Debug HTML from the scraper
+debug_*.html
