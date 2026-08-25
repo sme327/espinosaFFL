@@ -1,6 +1,6 @@
 id,display_name,team_name,color,light_color,emoji,order,active,photo_path,team_logo_path,sound_path,celebration,interface_mode
-shawn,Shawn,dad will win,#1F5E3B,#E3F0E8,🏈,1,true,,,,,
-jennifer,Jennifer,Marvelous Mamma,#002244,#E3E8F0,⭐,2,true,,,,,
-daphne,Daphne,Daphne's Magic,#0A5EA8,#E3EDF8,✨,3,true,,,,,
-elliot,Elliot,Pinkie pink 🏈,#E86AA6,#FDE8F3,🩷,4,true,,,,,
-wyatt,Wyatt,,#F28C28,#FEF0E3,🌟,5,false,,,,,
+shawn,Shawn,dad will win,#1F5E3B,#E3F0E8,🏈,1,true,,/brand/dad-will-win-v2.png,,,
+jennifer,Jennifer,Marvelous Mamma,#002244,#E3E8F0,⭐,2,true,,/brand/marvelous-mamma-v2.png,,,
+daphne,Daphne,Daphne's Magic,#0A5EA8,#E3EDF8,✨,3,true,,/brand/daphnes-magic-v2.png,,,
+elliot,Elliot,Pinkie pink 🏈,#E86AA6,#FDE8F3,🩷,4,true,,/brand/pinkie-pink-v2.png,,,
+wyatt,Wyatt,,#F28C28,#FEF0E3,🌟,5,false,,/brand/wyatt-future-manager-v2.png,,,
