@@ -11,7 +11,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://espinosaFFL.sme327.com"),
   title: { default: "Espinosa FFL Clubhouse", template: "%s · Espinosa FFL" },
   description,
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  // Tab icon: a Fredoka "E" in action green on stadium navy, rendered to PNG/ICO (the old
+  // favicon.svg was an emoji in a <text> element, which the stadium contract forbids).
+  icons: { icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/favicon-32.png", sizes: "32x32", type: "image/png" }, { url: "/icon-512.png", sizes: "512x512", type: "image/png" }], shortcut: "/favicon.ico", apple: "/apple-touch-icon.png" },
   openGraph: { title: "Espinosa FFL Clubhouse", description },
   twitter: { card: "summary", title: "Espinosa FFL Clubhouse", description },
 };

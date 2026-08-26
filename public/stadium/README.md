@@ -30,3 +30,7 @@ All seven interior scenes are 1800×520 WebP files, 23–51 KB each. They passed
 - `concourse-divider.webp` — unnecessary; the structural beam and action-green strip are sharper and lighter as CSS.
 
 See `docs/VISUAL_ASSET_BRIEF.md` for production specifications and acceptance checks.
+
+## Favicon (2026-08-26)
+
+`public/favicon.ico` (16/32/48), `favicon-32.png`, `apple-touch-icon.png`, `icon-512.png`: a Fredoka "E" in action green `#69BE28` on stadium navy `#002244`, rendered from type. Replaced the emoji-in-SVG favicon.
