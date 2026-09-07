@@ -1,25 +1,16 @@
-import { createHash, timingSafeEqual } from "node:crypto";
+import { createHash } from "node:crypto";
 import { env } from "cloudflare:workers";
 import { cookies } from "next/headers";
 import { requireDraftDb } from "@/db";
 
+// Trusted-household identity: the family taps a name, no PINs or passwords.
+// The session cookie only records who is picking so turn order holds up.
 export const DRAFT_SESSION_COOKIE = "espinosa_ffl_draft_session";
-export const DRAFT_PIN_PATTERN = /^\d{4}$/;
 
 export type DraftActor = { id: string; displayName: string; isCommissioner: boolean };
 
 export function sha256(value: string): string {
   return createHash("sha256").update(value).digest("hex");
-}
-
-export function draftPinDigest(managerId: string, pin: string): string {
-  return `sha256:${sha256(`${managerId}:${pin}`)}`;
-}
-
-export function verifyDraftPin(managerId: string, pin: string, storedDigest: string): boolean {
-  const candidate = Buffer.from(draftPinDigest(managerId, pin));
-  const expected = Buffer.from(storedDigest);
-  return candidate.length === expected.length && timingSafeEqual(candidate, expected);
 }
 
 export async function currentDraftActor(): Promise<DraftActor | null> {

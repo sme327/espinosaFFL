@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit --incremental false",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "data:build": "python3 scripts/normalize_league.py",
-    "draft:players": "python3 scripts/build_family_player_pool.py"
+    "draft:players": "python3 scripts/build_family_player_pool.py",
+    "draft:images": "python3 scripts/fetch_player_images.py"
   },
   "type": "module",
   "dependencies": {

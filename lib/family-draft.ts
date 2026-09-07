@@ -25,6 +25,12 @@ export type FamilyDraftSlot = {
 
 export const FAMILY_DRAFT_CAPACITY = draftConfig.familySize;
 export const familyDrafts = draftConfig.drafts as FamilyDraftConfig[];
+export const CURRENT_FAMILY_DRAFT_SEASON = Math.max(...familyDrafts.map((draft) => draft.season));
+
+/** The stable D1 row ID for a season's draft; the seed script uses the same shape. */
+export function familyDraftId(season: number): string {
+  return `family-${season}`;
+}
 
 export function familyDraftForSeason(season: number): FamilyDraftConfig | undefined {
   return familyDrafts.find((draft) => draft.season === season);

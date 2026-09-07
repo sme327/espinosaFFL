@@ -4,20 +4,49 @@ import { NextResponse } from "next/server";
 import { requireDraftDb } from "@/db";
 import { currentDraftActor } from "@/lib/server/draft-auth";
 
-type CorrectionBody = { action?: "undo-latest"; draftVersion?: number; idempotencyKey?: string; reason?: string };
+type ControlBody = { action?: "start" | "undo-latest"; draftVersion?: number; idempotencyKey?: string; reason?: string };
+
+async function startDraft(db: ReturnType<typeof requireDraftDb>, draftId: string, actorId: string, body: ControlBody) {
+  const draft = await db.prepare("SELECT status, version FROM draft_seasons WHERE id = ?")
+    .bind(draftId).first<{ status: string; version: number }>();
+  if (!draft || draft.status !== "ready") return NextResponse.json({ error: "This draft is not ready to start." }, { status: 409 });
+  if (draft.version !== body.draftVersion) return NextResponse.json({ error: "The board changed. Reload and try again.", currentVersion: draft.version }, { status: 409 });
+
+  const nextVersion = draft.version + 1;
+  try {
+    await db.batch([
+      db.prepare("INSERT INTO draft_transitions (id, draft_id, from_version, to_version, idempotency_key) VALUES (?, ?, ?, ?, ?)")
+        .bind(randomUUID(), draftId, draft.version, nextVersion, body.idempotencyKey),
+      db.prepare("INSERT INTO draft_events (id, draft_id, sequence, event_type, actor_manager_id, idempotency_key, payload_json) VALUES (?, ?, ?, 'draft.started', ?, ?, ?)")
+        .bind(randomUUID(), draftId, nextVersion, actorId, body.idempotencyKey, JSON.stringify({ startedBy: actorId })),
+      db.prepare("UPDATE draft_seasons SET status = 'live', version = ?, started_at = CURRENT_TIMESTAMP, updated_at = CURRENT_TIMESTAMP WHERE id = ? AND version = ?")
+        .bind(nextVersion, draftId, draft.version),
+    ]);
+  } catch {
+    const replay = await db.prepare("SELECT id FROM draft_events WHERE draft_id = ? AND idempotency_key = ? AND event_type = 'draft.started'")
+      .bind(draftId, body.idempotencyKey).first<{ id: string }>();
+    if (replay) return NextResponse.json({ ok: true, replayed: true });
+    return NextResponse.json({ error: "The draft could not be started. Reload and try again." }, { status: 409 });
+  }
+  return NextResponse.json({ ok: true, draft: { version: nextVersion, status: "live" } });
+}
 
 export async function POST(request: Request, context: { params: Promise<{ draftId: string }> }) {
   const actor = await currentDraftActor();
-  if (!actor) return NextResponse.json({ error: "Enter your commissioner PIN first." }, { status: 401 });
-  if (!actor.isCommissioner) return NextResponse.json({ error: "Only the commissioner can correct a pick." }, { status: 403 });
+  if (!actor) return NextResponse.json({ error: "Tap your name first." }, { status: 401 });
+  if (!actor.isCommissioner) return NextResponse.json({ error: "Only the commissioner can do that." }, { status: 403 });
 
   const { draftId } = await context.params;
-  const body = await request.json().catch(() => null) as CorrectionBody | null;
-  if (!body || body.action !== "undo-latest" || !Number.isInteger(body.draftVersion) || typeof body.idempotencyKey !== "string" || body.idempotencyKey.length > 160 || typeof body.reason !== "string" || !body.reason.trim()) {
-    return NextResponse.json({ error: "Choose undo latest and briefly explain the correction." }, { status: 400 });
+  const body = await request.json().catch(() => null) as ControlBody | null;
+  if (!body || !Number.isInteger(body.draftVersion) || typeof body.idempotencyKey !== "string" || body.idempotencyKey.length > 160) {
+    return NextResponse.json({ error: "That request is incomplete." }, { status: 400 });
   }
 
   const db = requireDraftDb(env);
+  if (body.action === "start") return startDraft(db, draftId, actor.id, body);
+  if (body.action !== "undo-latest" || typeof body.reason !== "string" || !body.reason.trim()) {
+    return NextResponse.json({ error: "Choose undo latest and briefly explain the correction." }, { status: 400 });
+  }
   const draft = await db.prepare("SELECT status, version FROM draft_seasons WHERE id = ?")
     .bind(draftId).first<{ status: string; version: number }>();
   if (!draft || !["live", "complete"].includes(draft.status)) return NextResponse.json({ error: "This draft cannot be corrected right now." }, { status: 409 });

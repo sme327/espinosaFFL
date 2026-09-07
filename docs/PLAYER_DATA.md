@@ -39,4 +39,6 @@ The importer refuses the wrong season, duplicate IDs, a very small pool, invalid
 
 ## Pictures and team identity
 
-Player images are optional. The player card always has a large position-colored fallback with the player's initials. NFL team identity always has a readable abbreviation badge even when no approved logo asset exists. Missing imagery can therefore never hide a player or prevent a pick.
+Player headshots and NFL team logos are downloaded once by `scripts/fetch_player_images.py` (or `npm run draft:images`) into `public/players/<season>/` and `public/nfl/`, so draft day never depends on an outside CDN. The script matches pool players to Sleeper's free public player dump by Yahoo ID, then by suffix-stripped name plus team or position, and stamps `imageUrl` onto the pool JSON; `build_family_player_pool.py` re-stamps from the downloaded files, so rebuilding the pool never loses pictures. DEF entries use their team logo as the picture.
+
+Player images remain optional. The player card always has a large position-colored fallback with the player's initials, and the NFL badge shows a readable abbreviation beside the logo. Missing imagery can therefore never hide a player or prevent a pick.

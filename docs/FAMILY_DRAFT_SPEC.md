@@ -10,7 +10,7 @@ Yahoo remains the official league system after the draft. The Draft Room only ne
 
 - One authoritative shared draft state
 - Snake schedule generated from season configuration
-- Manager PIN sessions
+- Tap-your-name manager sessions (trusted household — the family explicitly declined PINs)
 - Only the current manager or commissioner can submit a pick
 - Idempotent, concurrency-guarded pick saving
 - Commissioner proxy pick and latest-pick correction
@@ -21,6 +21,7 @@ Yahoo remains the official league system after the draft. The Draft Room only ne
 
 ## Intentionally omitted complexity
 
+- PINs, passwords, and login security of any kind (four people in one house)
 - More than five teams
 - Keepers and keeper costs
 - Traded draft picks

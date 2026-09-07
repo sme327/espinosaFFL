@@ -31,3 +31,6 @@ data/source/season_managers.csv
 
 # Debug HTML from the scraper
 debug_*.html
+
+# Sleeper player dump cache (14MB, refetchable)
+data/source/sleeper-players-nfl.json

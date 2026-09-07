@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClubhouseLink } from "@/components/clubhouse-link";
 import { ManagerIdentity } from "@/components/manager-identity";
 import { PlayerIdentity, type DraftPlayerIdentity } from "@/components/player-identity";
 import { TeamLogo } from "@/components/team-logo";
@@ -21,6 +22,19 @@ export default function DraftRoomPage() {
 
   return <main className="page-wrap inner-page draft-room-page">
     <RoomHero room="draft" label="Espinosa Family Draft" title="2026 Draft Room" status="Getting ready for draft day">Big pictures, simple choices, and one shared board for the whole family.</RoomHero>
+
+    <section className="hq-section draft-door-row">
+      <ClubhouseLink href="/draft/pick" className="draft-door">
+        <span aria-hidden="true">🪑</span>
+        <strong>My Draft Seat</strong>
+        <small>Everyone opens this on their own device to browse players and make picks.</small>
+      </ClubhouseLink>
+      <ClubhouseLink href="/draft/room" className="draft-door">
+        <span aria-hidden="true">📺</span>
+        <strong>The Big Board</strong>
+        <small>Put this one on the TV — the shared board the whole family watches.</small>
+      </ClubhouseLink>
+    </section>
 
     <section className="hq-section">
       <div className="section-heading"><h2>Who&rsquo;s Drafting?</h2><span>4 teams this season · Wyatt&rsquo;s seat is saved</span></div>
@@ -59,7 +73,7 @@ export default function DraftRoomPage() {
           <small>{POSITION_LABELS[player.position]} · Bye {player.byeWeek}</small>
         </article>)}
       </div>
-      <p className="draft-pool-note">349 ranked players are loaded. Player photos and official team art are the next visual layer; every player already has a clear, colorful fallback.</p>
+      <p className="draft-pool-note">{playerPool.playerCount} ranked players are loaded with photos and NFL team logos; anyone missing a picture gets a clear, colorful fallback.</p>
     </section>
   </main>;
 }

@@ -30,17 +30,33 @@ test("draft migration contains durable history, sessions, snapshots, and concurr
   assert.match(migration, /failed_count INTEGER NOT NULL DEFAULT 0/);
 });
 
-test("PIN and pick routes keep authorization and concurrency checks server-side", () => {
+test("trusted-household sessions skip PINs but keep turn and concurrency checks server-side", () => {
   const auth = fs.readFileSync(new URL("../lib/server/draft-auth.ts", import.meta.url), "utf8");
   const session = fs.readFileSync(new URL("../app/api/draft/session/route.ts", import.meta.url), "utf8");
   const picks = fs.readFileSync(new URL("../app/api/draft/[draftId]/picks/route.ts", import.meta.url), "utf8");
-  assert.match(auth, /timingSafeEqual/);
+  assert.doesNotMatch(auth, /pin_hash|pinDigest|verifyDraftPin|PIN_PATTERN/, "the family asked for no PINs — identity is tap-your-name only");
+  assert.doesNotMatch(session, /pin_hash|\bpin\b|PIN_PATTERN|failed_count/);
   assert.match(session, /httpOnly: true/);
-  assert.match(session, /MAX_FAILED_ATTEMPTS = 6/);
+  assert.match(session, /active = 1/, "only active family managers can hold a draft seat");
   assert.match(picks, /Only the current manager/);
   assert.match(picks, /draft_transitions/);
   assert.match(picks, /idempotencyKey/);
   assert.match(picks, /commissioner_proxy/);
+});
+
+test("the live draft room and pick views are wired to the shared state", () => {
+  const room = fs.readFileSync(new URL("../components/draft-room-live.tsx", import.meta.url), "utf8");
+  const pick = fs.readFileSync(new URL("../components/draft-pick-live.tsx", import.meta.url), "utf8");
+  const roomPage = fs.readFileSync(new URL("../app/draft/room/page.tsx", import.meta.url), "utf8");
+  const pickPage = fs.readFileSync(new URL("../app/draft/pick/page.tsx", import.meta.url), "utf8");
+  for (const view of [room, pick]) assert.match(view, /useFamilyDraftState/);
+  assert.match(room, /draft-board/);
+  assert.match(pick, /Who&rsquo;s holding this device\?/);
+  assert.match(pick, /idempotencyKey/);
+  assert.match(pick, /overrideReason/);
+  assert.match(roomPage, /familyDraftId\(CURRENT_FAMILY_DRAFT_SEASON\)/);
+  assert.match(pickPage, /familyDraftId\(CURRENT_FAMILY_DRAFT_SEASON\)/);
+  assert.doesNotMatch(room + pick, /countdown|deadline|timer/i);
 });
 
 test("family draft deliberately has no timer or pause-resume machinery", () => {
@@ -53,7 +69,8 @@ test("family draft deliberately has no timer or pause-resume machinery", () => {
 
 test("commissioner correction only undoes the latest pick and preserves history", () => {
   const control = fs.readFileSync(new URL("../app/api/draft/[draftId]/control/route.ts", import.meta.url), "utf8");
-  assert.match(control, /Only the commissioner can correct a pick/);
+  assert.match(control, /Only the commissioner can do that/);
+  assert.match(control, /'draft\.started'/);
   assert.match(control, /action !== "undo-latest"/);
   assert.match(control, /ORDER BY s\.overall DESC LIMIT 1/);
   assert.match(control, /reversed_at = CURRENT_TIMESTAMP/);

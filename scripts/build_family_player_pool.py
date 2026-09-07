@@ -18,6 +18,20 @@ DEFAULT_SOURCE = LEAGUES_DIR / "insert witty name here" / "Draft App" / "data" /
 DEFAULT_OUTPUT = ROOT / "data" / "draft" / "players-2026.json"
 POSITIONS = {"QB", "RB", "WR", "TE", "K", "DEF"}
 MAX_PRESEASON_RANK = 350
+# Written by scripts/fetch_player_images.py; DEF entries use their team logo.
+IMAGE_EXTENSIONS = ("jpg", "png", "webp")
+
+
+def local_image_url(position: str, source_id: str, nfl_team: str) -> str | None:
+    directory, stem, prefix = (
+        (ROOT / "public" / "nfl", nfl_team, "/nfl")
+        if position == "DEF"
+        else (ROOT / "public" / "players" / "2026", source_id, "/players/2026")
+    )
+    for extension in IMAGE_EXTENSIONS:
+        if (directory / f"{stem}.{extension}").exists():
+            return f"{prefix}/{stem}.{extension}"
+    return None
 
 
 def arguments() -> argparse.Namespace:
@@ -62,7 +76,7 @@ def main() -> None:
             "byeWeek": row.get("bye_week") if isinstance(row.get("bye_week"), int) else None,
             "overallRank": rank,
             "sourceUrl": row.get("source_url"),
-            "imageUrl": None,
+            "imageUrl": local_image_url(position, str(player_id), nfl_team),
         })
 
     players.sort(key=lambda player: (player["overallRank"], player["name"]))

@@ -22,15 +22,16 @@ function initials(name: string): string {
 
 export function PlayerIdentity({ player, size = "medium", showName = true }: { player: DraftPlayerIdentity; size?: "small" | "medium" | "large"; showName?: boolean }) {
   const style = { "--player-color": POSITION_COLORS[player.position] } as CSSProperties;
+  const isTeamLogoPicture = player.imageUrl?.startsWith("/nfl/") ?? false;
   return <span className={`player-identity player-identity-${size}`} style={style}>
     <span className="player-identity-picture" aria-hidden="true">
       {player.imageUrl
-        ? <span className="player-identity-photo" style={{ backgroundImage: `url(${player.imageUrl})` }} />
+        ? <span className={`player-identity-photo${isTeamLogoPicture ? " player-identity-photo-contain" : ""}`} style={{ backgroundImage: `url(${player.imageUrl})` }} />
         : <span className="player-identity-initials">{initials(player.name)}</span>}
     </span>
     {showName && <span className="player-identity-copy">
       <strong>{player.name}</strong>
-      <span><b>{player.position}</b><i aria-label={`${player.nflTeam} NFL team`}>{player.nflTeam}</i></span>
+      <span><b>{player.position}</b><i aria-label={`${player.nflTeam} NFL team`}><img src={`/nfl/${player.nflTeam}.png`} alt="" loading="lazy" />{player.nflTeam}</i></span>
     </span>}
   </span>;
 }
