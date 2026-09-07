@@ -20,7 +20,7 @@ function BigBoard({ state, view }: { state: FamilyDraftState; view: DraftView })
   return <section className="hq-section">
     <div className="section-heading"><h2>The Big Board</h2><span>{state.picks.length} of {view.totalSlots} picks in</span></div>
     <div className="draft-board-scroll">
-      <table className="draft-board" style={{ "--board-columns": view.teams.length } as React.CSSProperties}>
+      <table className="draft-board">
         <thead>
           <tr>
             <th scope="col" className="draft-board-round-header"><span className="sr-only">Round</span></th>

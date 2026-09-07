@@ -31,7 +31,7 @@ export function PlayerIdentity({ player, size = "medium", showName = true }: { p
     </span>
     {showName && <span className="player-identity-copy">
       <strong>{player.name}</strong>
-      <span><b>{player.position}</b><i aria-label={`${player.nflTeam} NFL team`}><img src={`/nfl/${player.nflTeam}.png`} alt="" loading="lazy" />{player.nflTeam}</i></span>
+      <span><b>{player.position}</b>{player.nflTeam && <i aria-label={`${player.nflTeam} NFL team`}><img src={`/nfl/${player.nflTeam}.png`} alt="" loading="lazy" />{player.nflTeam}</i>}</span>
     </span>}
   </span>;
 }
