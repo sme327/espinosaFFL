@@ -14,7 +14,10 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "data:build": "python3 scripts/normalize_league.py",
     "draft:players": "python3 scripts/build_family_player_pool.py",
-    "draft:images": "python3 scripts/fetch_player_images.py"
+    "draft:images": "python3 scripts/fetch_player_images.py",
+    "weekly:matchups": "python3 scripts/seed_weekly_matchups.py",
+    "wall:seed": "python3 scripts/seed_achievements.py",
+    "wall:award": "python3 scripts/award_achievement.py"
   },
   "type": "module",
   "dependencies": {

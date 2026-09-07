@@ -20,6 +20,16 @@ The clubhouse adds one small layer of family fun around Yahoo; it does not try t
 - A matchup locks independently when its relevant NFL games begin; an early Thursday game does not close every family activity.
 - Commissioner corrections preserve history instead of silently replacing it.
 
+## Commissioner setup each week
+
+The current week is computed from `seasonStartTuesdays` in `data/config/weekly-cycle.json` (Tuesday to Tuesday, Chicago time). Matchups mirror the real Yahoo pairings and are created by the commissioner in one command:
+
+```
+python3 scripts/seed_weekly_matchups.py --pairs shawn:jennifer,daphne:elliot --featured shawn:jennifer --apply
+```
+
+Every matchup locks at noon Sunday by default; a `--lock pair=ISO` override handles Thursday games so one early game never closes the whole week. Re-running updates locks and the featured game without touching saved predictions.
+
 ## What appears on the weekly home
 
 The page leads with one clear action based on the current stage. Below it are the Game of the Week, each person's participation status, optional fun, and the previous recap. The interface should never present all administration and family choices at once.

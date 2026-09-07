@@ -1,5 +1,8 @@
 {
   "timezone": "America/Chicago",
+  "seasonStartTuesdays": {
+    "2026": "2026-09-08"
+  },
   "officialResultsSource": "yahoo",
   "principles": [
     "One short family check-in can complete the important activities.",
@@ -29,7 +32,9 @@
       "description": "Tap a manager picture for each family matchup, then choose a happy, unsure, or super-confident face.",
       "primaryAction": "Make my picks",
       "optional": false,
-      "locks": ["Each matchup locks when its NFL games begin; other matchups stay open."]
+      "locks": [
+        "Each matchup locks when its NFL games begin; other matchups stay open."
+      ]
     },
     {
       "id": "game_of_week",
@@ -51,7 +56,9 @@
       "description": "Choose a favorite player by picture, try an optional family challenge, or send a friendly prewritten reaction.",
       "primaryAction": "Join the fun",
       "optional": true,
-      "locks": ["MVP choices close before Tuesday recap."]
+      "locks": [
+        "MVP choices close before Tuesday recap."
+      ]
     },
     {
       "id": "commissioner_finalize",
@@ -63,17 +70,38 @@
       "primaryAction": "Finalize the week",
       "optional": false,
       "commissionerOnly": true,
-      "locks": ["Published results are editable by the commissioner without deleting their history."]
+      "locks": [
+        "Published results are editable by the commissioner without deleting their history."
+      ]
     }
   ],
   "confidenceChoices": [
-    { "id": "unsure", "label": "Could go either way", "icon": "🤔" },
-    { "id": "confident", "label": "I think they win", "icon": "🙂" },
-    { "id": "super", "label": "Super confident", "icon": "🤩" }
+    {
+      "id": "unsure",
+      "label": "Could go either way",
+      "icon": "🤔"
+    },
+    {
+      "id": "confident",
+      "label": "I think they win",
+      "icon": "🙂"
+    },
+    {
+      "id": "super",
+      "label": "Super confident",
+      "icon": "🤩"
+    }
   ],
   "participationRules": {
-    "requiredForWeeklyCompletion": ["family matchup predictions"],
-    "alwaysOptional": ["Game of the Week question", "Kids' MVP", "weekly challenge", "friendly reaction"],
+    "requiredForWeeklyCompletion": [
+      "family matchup predictions"
+    ],
+    "alwaysOptional": [
+      "Game of the Week question",
+      "Kids' MVP",
+      "weekly challenge",
+      "friendly reaction"
+    ],
     "lateJoinAllowed": true,
     "missedWeekPenalty": false,
     "futureManagerCanParticipate": true

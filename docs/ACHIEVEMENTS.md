@@ -15,6 +15,12 @@ Automatic awards use a named, testable `ruleKey`. They cover objective events su
 
 Commissioner awards capture judgment and family context: kindness, helping someone, a hilarious moment, a bold prediction, or a meaningful story. These require a manager, season, date, and short note. They never silently award themselves.
 
+## Commissioner tools
+
+- `python3 scripts/seed_achievements.py --apply` loads (or refreshes) the badge catalog from `achievements.json` into D1.
+- `python3 scripts/award_achievement.py --achievement helping_hand --manager daphne --note "..." --apply` grants a badge; `--revoke` marks it revoked without deleting history.
+- The Achievement Wall merges these live awards with the automatically computed history; the latest award note appears as the badge's story.
+
 ## Fairness rules
 
 - Participation and family-spirit achievements do not require winning a matchup.

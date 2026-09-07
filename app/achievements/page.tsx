@@ -4,10 +4,12 @@ import { TeamLogo } from "@/components/team-logo";
 import { RoomHero } from "@/components/room-hero";
 import { achievementCategories, achievements, historicalAchievementsFor } from "@/lib/achievements";
 import { CLUBHOUSE_FAMILY } from "@/lib/league";
+import { liveAwardsByManager, mergeWallAchievements } from "@/lib/server/achievement-awards";
 
 export const metadata: Metadata = { title: "Achievement Wall" };
 
-export default function AchievementsPage() {
+export default async function AchievementsPage() {
+  const liveAwards = await liveAwardsByManager();
   return <main className="page-wrap inner-page achievement-page">
     <RoomHero room="achievements" label="The Family Hall of Fame" title="Achievement Wall">Winning is one way to shine. Showing up, helping, cheering, and making memories count too.</RoomHero>
 
@@ -17,7 +19,7 @@ export default function AchievementsPage() {
 
     <section className="achievement-lockers">
       {CLUBHOUSE_FAMILY.map((manager) => {
-        const earned = historicalAchievementsFor(manager);
+        const earned = mergeWallAchievements(historicalAchievementsFor(manager), liveAwards.get(manager.id) ?? []);
         const earnedIds = new Set(earned.map((award) => award.id));
         const nextUp = achievements.filter((achievement) => !earnedIds.has(achievement.id)).slice(0, 4);
         return <article className="achievement-locker" key={manager.id} style={{ "--locker-color": manager.color } as React.CSSProperties}>
@@ -30,7 +32,7 @@ export default function AchievementsPage() {
             <h2>On the Wall</h2>
             {earned.length ? earned.map((award) => <div className="achievement-badge earned" key={award.id}>
               <span className="achievement-badge-icon" aria-hidden="true">{award.icon}</span>
-              <div><strong>{award.name}</strong><p>{award.description}</p><small>{award.count > 1 ? `${award.count} times · ` : ""}{award.seasons.join(" · ")}</small></div>
+              <div><strong>{award.name}</strong><p>{award.notes.length ? `“${award.notes[award.notes.length - 1]}”` : award.description}</p><small>{award.count > 1 ? `${award.count} times · ` : ""}{award.seasons.join(" · ")}</small></div>
             </div>) : <p className="achievement-empty">{manager.active ? "A fresh wall, ready for the next great moment." : "Wyatt’s space is ready before his first official season."}</p>}
           </div>
           <div className="achievement-next">
