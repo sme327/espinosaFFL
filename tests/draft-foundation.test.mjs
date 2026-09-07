@@ -10,12 +10,14 @@ test("2026 draft planning reserves exactly one of five family spots for Wyatt", 
   assert.equal(config.familySize, 5);
   const draft = config.drafts.find((item) => item.season === 2026);
   assert.ok(draft);
-  assert.equal(draft.status, "planning");
+  assert.equal(draft.status, "ready");
   assert.deepEqual(draft.activeManagerIds, ["shawn", "jennifer", "daphne", "elliot"]);
   assert.deepEqual(draft.reservedManagerIds, ["wyatt"]);
   assert.equal(new Set([...draft.activeManagerIds, ...draft.reservedManagerIds]).size, 5);
   assert.equal(draft.rounds, draft.rosterSlots.length);
-  assert.equal(draft.draftOrder.length, 0, "draft order should not be invented before the family sets it");
+  // The family chose this order on 2026-09-07: Elliot first, snaking back.
+  assert.deepEqual(draft.draftOrder, ["elliot", "shawn", "jennifer", "daphne"]);
+  assert.equal(draft.orderType, "snake");
 });
 
 test("draft migration contains durable history, sessions, snapshots, and concurrency guards", () => {

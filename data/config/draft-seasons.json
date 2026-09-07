@@ -3,14 +3,34 @@
   "drafts": [
     {
       "season": 2026,
-      "status": "planning",
-      "activeManagerIds": ["shawn", "jennifer", "daphne", "elliot"],
-      "reservedManagerIds": ["wyatt"],
+      "status": "ready",
+      "activeManagerIds": [
+        "shawn",
+        "jennifer",
+        "daphne",
+        "elliot"
+      ],
+      "reservedManagerIds": [
+        "wyatt"
+      ],
       "commissionerManagerId": "shawn",
-      "draftOrder": [],
+      "draftOrder": [
+        "elliot",
+        "shawn",
+        "jennifer",
+        "daphne"
+      ],
       "orderType": "snake",
       "rounds": 7,
-      "rosterSlots": ["QB", "RB", "WR", "TE", "K", "BN", "BN"]
+      "rosterSlots": [
+        "QB",
+        "RB",
+        "WR",
+        "TE",
+        "K",
+        "BN",
+        "BN"
+      ]
     }
   ]
 }

@@ -37,7 +37,7 @@ def sql_text(value: object) -> str:
 def arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--season", type=int, default=None, help="Defaults to the latest configured season")
-    parser.add_argument("--order", required=True, help="Comma-separated manager IDs in draft-position order, e.g. shawn,jennifer,daphne,elliot")
+    parser.add_argument("--order", default=None, help="Comma-separated manager IDs in draft-position order; defaults to the season's draftOrder in draft-seasons.json")
     parser.add_argument("--status", choices=["ready", "live"], default="ready")
     parser.add_argument("--output", default=None)
     parser.add_argument("--reset", action="store_true",
@@ -54,7 +54,9 @@ def main() -> None:
     if not draft:
         raise SystemExit(f"No draft configured for season {season}")
 
-    order = [manager_id.strip() for manager_id in args.order.split(",") if manager_id.strip()]
+    order = [manager_id.strip() for manager_id in args.order.split(",") if manager_id.strip()] if args.order else list(draft.get("draftOrder", []))
+    if not order:
+        raise SystemExit("No draft order: pass --order or set draftOrder in draft-seasons.json")
     active = draft["activeManagerIds"]
     if sorted(order) != sorted(active):
         raise SystemExit(f"--order must contain exactly the active managers {active}, got {order}")
