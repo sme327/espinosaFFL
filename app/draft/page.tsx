@@ -11,28 +11,36 @@ import { managerById } from "@/lib/league";
 export const metadata: Metadata = { title: "Draft Room" };
 
 const POSITION_LABELS = { QB: "Quarterbacks", RB: "Running Backs", WR: "Wide Receivers", TE: "Tight Ends", K: "Kickers", DEF: "Defenses" } as const;
+const STATUS_LABELS = {
+  planning: "Getting ready for draft day",
+  ready: "Draft day is set",
+  live: "Draft day is live!",
+  complete: "The 2026 draft is in the books",
+  closed: "Season underway",
+} as const;
 type DraftRoomPlayer = DraftPlayerIdentity & { id: string; overallRank: number; byeWeek: number };
 
 export default function DraftRoomPage() {
   const draft = familyDraftForSeason(2026);
   if (!draft) throw new Error("The 2026 family draft has not been configured.");
+  const drafted = draft.status === "complete" || draft.status === "closed";
   const activeManagers = draft.activeManagerIds.map(managerById).filter((manager) => manager !== undefined);
   const reservedManagers = draft.reservedManagerIds.map(managerById).filter((manager) => manager !== undefined);
   const featured = playerPool.players.slice(0, 12) as DraftRoomPlayer[];
 
   return <main className="page-wrap inner-page draft-room-page">
-    <RoomHero room="draft" label="Espinosa Family Draft" title="2026 Draft Room" status="Getting ready for draft day">Big pictures, simple choices, and one shared board for the whole family.</RoomHero>
+    <RoomHero room="draft" label="Espinosa Family Draft" title="2026 Draft Room" status={STATUS_LABELS[draft.status]}>Big pictures, simple choices, and one shared board for the whole family.</RoomHero>
 
     <section className="hq-section draft-door-row">
       <ClubhouseLink href="/draft/pick" className="draft-door">
         <span aria-hidden="true">🪑</span>
         <strong>My Draft Seat</strong>
-        <small>Everyone opens this on their own device to browse players and make picks.</small>
+        <small>{drafted ? "Relive your own picks from draft day." : "Everyone opens this on their own device to browse players and make picks."}</small>
       </ClubhouseLink>
       <ClubhouseLink href="/draft/room" className="draft-door">
         <span aria-hidden="true">📺</span>
         <strong>The Big Board</strong>
-        <small>Put this one on the TV — the shared board the whole family watches.</small>
+        <small>{drafted ? "The full 2026 results — every round, every roster, printable." : "Put this one on the TV — the shared board the whole family watches."}</small>
       </ClubhouseLink>
     </section>
 
@@ -42,7 +50,7 @@ export default function DraftRoomPage() {
         {activeManagers.map((manager) => <article className="draft-manager-seat" key={manager.id} style={{ borderColor: manager.color }}>
           <ManagerIdentity manager={manager} size="large" showName showTeam />
           <TeamLogo manager={manager} size="medium" />
-          <span>Ready to draft</span>
+          <span>{drafted ? "Roster in the books" : "Ready to draft"}</span>
         </article>)}
         {reservedManagers.map((manager) => <article className="draft-manager-seat draft-manager-seat-future" key={manager.id}>
           <ManagerIdentity manager={manager} size="large" showName futureLabel />
@@ -56,7 +64,9 @@ export default function DraftRoomPage() {
       <div>
         <p className="eyebrow">The simple plan</p>
         <h2>{draft.rounds} picks for each team</h2>
-        <p>We&rsquo;ll use a snake draft. Everyone picks on their own device, and Dad can help make any pick when needed.</p>
+        <p>{drafted
+          ? "A snake draft, everyone on their own device — and every single pick was made by its own manager."
+          : "We’ll use a snake draft. Everyone picks on their own device, and Dad can help make any pick when needed."}</p>
       </div>
       <div className="draft-roster-chips" aria-label="Roster spots">
         {draft.rosterSlots.map((slot, index) => <span key={`${slot}-${index}`}>{index + 1}<b>{slot}</b></span>)}

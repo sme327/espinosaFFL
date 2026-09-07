@@ -104,6 +104,10 @@ Interface mode is presentation guidance, not an age label and not a permission b
 - Simple copy or download
 - Commissioner correction when the recorded result must be aligned with Yahoo
 
+## Status
+
+The 2026 family draft ran to completion on this system on 2026-09-07: 28 of 28 picks in snake order (Elliot, Shawn, Jennifer, Daphne), every pick made by its own manager, zero proxy picks or corrections needed.
+
 ## Release gates
 
 - Complete four-team rehearsal on real family devices

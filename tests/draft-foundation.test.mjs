@@ -10,7 +10,7 @@ test("2026 draft planning reserves exactly one of five family spots for Wyatt", 
   assert.equal(config.familySize, 5);
   const draft = config.drafts.find((item) => item.season === 2026);
   assert.ok(draft);
-  assert.equal(draft.status, "ready");
+  assert.equal(draft.status, "complete", "the 2026 family draft happened on 2026-09-07");
   assert.deepEqual(draft.activeManagerIds, ["shawn", "jennifer", "daphne", "elliot"]);
   assert.deepEqual(draft.reservedManagerIds, ["wyatt"]);
   assert.equal(new Set([...draft.activeManagerIds, ...draft.reservedManagerIds]).size, 5);
