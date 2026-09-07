@@ -4,6 +4,7 @@ import { ManagerIdentity } from "@/components/manager-identity";
 import { PlayerIdentity, type DraftPlayerIdentity } from "@/components/player-identity";
 import { TeamLogo } from "@/components/team-logo";
 import { RoomHero } from "@/components/room-hero";
+import draftGrades from "@/data/draft/grades-2026.json";
 import playerPool from "@/data/draft/players-2026.json";
 import { familyDraftForSeason } from "@/lib/family-draft";
 import { managerById } from "@/lib/league";
@@ -44,8 +45,37 @@ export default function DraftRoomPage() {
       </ClubhouseLink>
     </section>
 
+    {drafted && <section className="hq-section">
+      <div className="section-heading"><h2>📋 The Draft Report Card</h2><span>{draftGrades.note}</span></div>
+      <div className="draft-grade-grid">
+        {draftGrades.teams.map((team) => {
+          const manager = managerById(team.managerId);
+          return manager && <article className="draft-grade-card" key={team.managerId} style={{ "--seat-color": manager.color, "--seat-light": manager.lightColor } as React.CSSProperties}>
+            <header>
+              <ManagerIdentity manager={manager} size="medium" showName showTeam />
+              <span className="draft-grade-mark" aria-label={`Grade ${team.grade}`}>{team.grade}</span>
+            </header>
+            <h3>{team.title}</h3>
+            <p>{team.blurb}</p>
+            <ul>{team.highlights.map((line) => <li key={line}>{line}</li>)}</ul>
+          </article>;
+        })}
+      </div>
+      <div className="draft-award-row">
+        {draftGrades.awards.map((award) => {
+          const manager = managerById(award.managerId);
+          return <article className="draft-award-card" key={award.title} style={manager ? { "--seat-color": manager.color } as React.CSSProperties : undefined}>
+            <span aria-hidden="true">{award.icon}</span>
+            <strong>{award.title}</strong>
+            <small>{manager?.teamName ?? ""}</small>
+            <p>{award.text}</p>
+          </article>;
+        })}
+      </div>
+    </section>}
+
     <section className="hq-section">
-      <div className="section-heading"><h2>Who&rsquo;s Drafting?</h2><span>4 teams this season · Wyatt&rsquo;s seat is saved</span></div>
+      <div className="section-heading"><h2>{drafted ? "The 2026 Draft Class" : "Who’s Drafting?"}</h2><span>4 teams this season · Wyatt&rsquo;s seat is saved</span></div>
       <div className="draft-family-row">
         {activeManagers.map((manager) => <article className="draft-manager-seat" key={manager.id} style={{ borderColor: manager.color }}>
           <ManagerIdentity manager={manager} size="large" showName showTeam />

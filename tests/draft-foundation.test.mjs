@@ -122,3 +122,17 @@ test("the shared 2026 Draft Room is visible and has no clock", () => {
   assert.doesNotMatch(header, /🏠|🏆|📖|👥|🥊|🗂️|🔮|🎯/);
   assert.doesNotMatch(page, /countdown|pauseDraft|resumeDraft/i);
 });
+
+test("the draft report card celebrates every family team", () => {
+  const grades = JSON.parse(fs.readFileSync(new URL("../data/draft/grades-2026.json", import.meta.url), "utf8"));
+  const draft = config.drafts.find((item) => item.season === 2026);
+  assert.deepEqual(grades.teams.map((team) => team.managerId).sort(), [...draft.activeManagerIds].sort(), "every drafter gets a grade");
+  for (const team of grades.teams) {
+    assert.match(team.grade, /^A[+−-]?$/, `${team.managerId} gets an A-range grade — this report card only celebrates`);
+    assert.ok(team.title && team.blurb && team.highlights.length >= 2);
+  }
+  for (const award of grades.awards) assert.ok(draft.activeManagerIds.includes(award.managerId));
+  const page = fs.readFileSync(new URL("../app/draft/page.tsx", import.meta.url), "utf8");
+  assert.match(page, /The Draft Report Card/);
+  assert.match(page, /drafted &&/, "the report card only appears once the draft is complete");
+});

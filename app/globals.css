@@ -721,3 +721,21 @@ footer.hq-footer { border-top:5px solid var(--stadium-green); background:#000d16
   body { padding-top:0; background:#fff; }
   .draft-board-scroll { overflow:visible; }
 }
+
+/* ── Draft report card (post-draft family fun) ── */
+.draft-grade-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:18px; }
+.draft-grade-card { padding:20px; border-radius:18px; border-top:5px solid var(--seat-color,var(--room-draft)); background:linear-gradient(160deg,var(--seat-light,var(--surface)) 0%,var(--surface) 45%); box-shadow:0 4px 18px rgba(0,0,0,.07); }
+.draft-grade-card header { display:flex; align-items:center; justify-content:space-between; gap:14px; }
+.draft-grade-mark { display:grid; place-items:center; flex:0 0 auto; width:64px; height:64px; border-radius:50%; border:3px solid var(--seat-color,var(--room-draft)); background:var(--surface); color:var(--seat-color,var(--room-draft)); font-family:var(--font-display),cursive; font-size:1.7rem; font-weight:700; transform:rotate(6deg); box-shadow:0 4px 12px rgba(0,0,0,.12); }
+.draft-grade-card h3 { margin:14px 0 6px; font-family:var(--font-display),cursive; font-size:1.25rem; color:var(--ink-strong); }
+.draft-grade-card > p { margin:0 0 12px; color:var(--ink); font-size:.92rem; line-height:1.45; }
+.draft-grade-card ul { display:flex; flex-direction:column; gap:6px; margin:0; padding:0; list-style:none; }
+.draft-grade-card li { padding:7px 10px; border-radius:10px; background:var(--surface); border:1px solid var(--line); font-size:.8rem; }
+.draft-award-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.draft-award-card { display:flex; flex-direction:column; align-items:center; gap:4px; padding:16px 12px; border-radius:16px; border:2px dashed var(--line-gold); background:var(--surface-gold); text-align:center; }
+.draft-award-card > span { font-size:1.9rem; }
+.draft-award-card strong { color:var(--gold-dark); font-size:.85rem; }
+.draft-award-card small { color:var(--seat-color,var(--muted)); font-size:.7rem; font-weight:800; }
+.draft-award-card p { margin:4px 0 0; color:var(--muted); font-size:.74rem; line-height:1.35; }
+@media (max-width:900px) { .draft-award-row { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px) { .draft-grade-grid { grid-template-columns:1fr; } }

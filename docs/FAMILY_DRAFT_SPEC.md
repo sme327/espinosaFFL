@@ -27,7 +27,7 @@ Yahoo remains the official league system after the draft. The Draft Room only ne
 - Traded draft picks
 - Private tier queues
 - Manager prediction models
-- Draft grades
+- In-draft grades or pick analysis (a playful post-draft family report card was added at the family's request after the 2026 draft — celebration, not statistics)
 - Automated Yahoo roster entry
 - Dense twelve-team board layouts
 - Draft timers, countdowns, pause, and resume controls

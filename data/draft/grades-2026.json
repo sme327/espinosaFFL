@@ -1,0 +1,41 @@
+{
+  "season": 2026,
+  "gradedAt": "2026-09-07",
+  "note": "Family report card — graded on fun, guts, and steals. Everyone passed with flying colors.",
+  "teams": [
+    {
+      "managerId": "elliot",
+      "grade": "A+",
+      "title": "The Closer",
+      "blurb": "Made the first pick in family draft history — Bijan Robinson! — and was still stealing stars at the very end. A.J. Brown with pick 25 is highway robbery.",
+      "highlights": ["🥇 Bijan Robinson, the first pick ever", "😱 A.J. Brown still on the board in round 7", "🦅 Jalen Hurts runs the offense"]
+    },
+    {
+      "managerId": "shawn",
+      "grade": "A−",
+      "title": "The Riverboat Gambler",
+      "blurb": "Ja'Marr Chase in round 5 and Derrick Henry in round 7 are two of the biggest heists of the day. The round-3 Sam Darnold pick? We don't talk about the Sam Darnold pick.",
+      "highlights": ["💎 Ja'Marr Chase (the #3 player!) at pick 18", "🐴 Derrick Henry gallops in at pick 26", "🤫 Sam Darnold, a bold round-3 adventure"]
+    },
+    {
+      "managerId": "jennifer",
+      "grade": "A+",
+      "title": "The All-Star Collector",
+      "blurb": "Puka, Christian McCaffrey, Jonathan Taylor, and then Justin Jefferson with the second-to-last pick of the draft. This roster looks like a Pro Bowl team.",
+      "highlights": ["🌟 Four of the top 15 players on one team", "🎯 Justin Jefferson at pick 27 (!!)", "🧨 Jonathan Taylor waited at pick 19"]
+    },
+    {
+      "managerId": "daphne",
+      "grade": "A+",
+      "title": "The Magician",
+      "blurb": "Grabbed the first quarterback off the board — Josh Allen — then Saquon, Amon-Ra, and Achane kept falling into her hat. Balanced, sparkly, dangerous.",
+      "highlights": ["🦄 Josh Allen, first QB taken", "🪄 Saquon Barkley appeared at pick 13", "✨ Amon-Ra & Achane back-to-back steals"]
+    }
+  ],
+  "awards": [
+    { "icon": "💎", "title": "Steal of the Draft", "managerId": "shawn", "text": "Ja'Marr Chase — the #3 ranked player — still there at pick 18." },
+    { "icon": "🎯", "title": "Best Last Call", "managerId": "jennifer", "text": "Justin Jefferson with the 27th of 28 picks. Unbelievable." },
+    { "icon": "🥇", "title": "First Pick in Family History", "managerId": "elliot", "text": "Bijan Robinson opens the Espinosa FFL record books." },
+    { "icon": "🦄", "title": "Boldest Move", "managerId": "daphne", "text": "First quarterback off the board — Josh Allen never made it out of round 1." }
+  ]
+}
